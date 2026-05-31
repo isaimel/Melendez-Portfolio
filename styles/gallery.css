@@ -18,7 +18,7 @@
 
 #lightboxContainer span {
     opacity: 1;
-    color: var(--pseudo-white);
+    color: var(--color-2);
     width: 50%;
     font-size: max(2vw, 1rem);
     text-align: center;
@@ -42,7 +42,7 @@
   flex: 1;
   height: 100%;
   user-select: none;
-  background-color: inherit;
+  background-color: var(--color-2);
   color: var(--color-1);
 }
 
@@ -71,8 +71,7 @@
 .center_image{
     cursor: pointer;
 }
-
-
+ 
 .all_container{
     background: var(--color-1);
 }
@@ -118,7 +117,7 @@
 .item_description{
   display: none;
   align-items: start;
-  color: var(--pseudo-white);
+  color: var(--color-2);
   width: 100%;
   height: max(5.5vw, 3.6rem);
   text-align: center;

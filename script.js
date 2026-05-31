@@ -133,12 +133,14 @@ function galleryFunctionality(gallery, jsonData){
   function swapGallery(){
     if (currentGallery == Display.SCROLL){
       currentGallery = Display.ALL;
+      galleryHeader.textContent = "Display scroll gallery"
       slideshowContainer.style.display = 'none';
       tabGalleriesContainer.style.display = '';
       selectTab(currentTab);
     }
     else{
       currentGallery = Display.SCROLL;
+      galleryHeader.textContent = "Display full gallery";
       slideshowContainer.style.display = '';
       tabGalleriesContainer.style.display = 'none';
     }
@@ -224,14 +226,16 @@ function galleryFunctionality(gallery, jsonData){
   
   function selectTab(newTabName){
     var oldTabName = currentTab;
-    tabDivList[currentTab].style.backgroundColor = '';
-    tabDivList[currentTab].style.color = '';
+    var oldDiv = tabDivList[oldTabName];
+    oldDiv.style.backgroundColor = '';
+    oldDiv.style.color = '';
+    
+    
+    var newDiv = tabDivList[newTabName];
+    newDiv.style.backgroundColor = "var(--color-1)";
+    newDiv.style.color = "var(--color-2)";
     
     currentTab = newTabName;
-
-    tabDivList[currentTab].style.backgroundColor = "var(--color-1)";
-    tabDivList[currentTab].style.color = "var(--pseudo-white)";
-
     if (currentGallery == Display.SCROLL) showDivs();
     else showGallery(oldTabName);
   }

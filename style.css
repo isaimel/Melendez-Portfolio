@@ -3,35 +3,28 @@
 @import url("./styles/projects.css");
 
 :root {
-    /* --pseudo-white: aliceblue;
-    --color-1: lightblue; */
-    --pseudo-white: royalblue;
-    --color-1: aliceblue;
+    --color-2: snow;
+    --color-2-triple: 255 250 250;
+
+    --color-1: cornflowerblue;
+    --color-1-triple: 100 149 237;
+
+    --color-3: black;
+    --color-3-triple: 0 0 0;
     --slides_dimension: max(32vw, 14rem + 16vw);
+    --font-1: 'Roboto Serif';
+    --font-2: 'Inter';
 }
-button{
-    border: none;
-    cursor: pointer;
-    padding: .2rem .4rem;
-    opacity: 0.8;
-    background-color: var(--color-1);
-    color: var(--pseudo-white);
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-}
-button:hover {
-    opacity: 1;
-}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-2);
     gap: 6vw;
-    background-color: var(--pseudo-white);
+    background-color: var(--color-2);
 }
 body div{
     display: flex;
@@ -47,24 +40,51 @@ a:link, a:visited {
 }
 
 .header{
-    color: var(--color-1);
+    color: var(--color-2);
     height: max(22vw, 18vw + 2rem);
+    background:
+    linear-gradient(
+        rgb(var(--color-1-triple) / 85%),
+        rgb(var(--color-1-triple) / 85%)
+    ),
+    url("assets/traditional/large_leaf_flower.png");
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    font-family: var(--font-1);
+}
+button{
+    border: none;
+    cursor: pointer;
+    padding: .2rem .4rem;
+    opacity: 0.8;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+button:hover {
+    opacity: 1;
 }
 .section_title{
     color: var(--color-1);
     font-size: max(5vw, 1.6rem);
     background-color: inherit;
     margin: 0 0 .6vw 0;
-    font: bold;
+    font-family: var(--font-1);
+    font-weight: bold;
 }
 
 .name{
   height: fit-content;
   font-size: max(8vw, 4vw + 1rem);
+  font-weight: bold;
 }
 
-.thank_you{
+.sub_name{
   font-size: max(2vw, 1rem);
+  font-family: var(--font-2);
 }
 
 @keyframes initialZoom {
