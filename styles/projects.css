@@ -11,7 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     text-align: justify;
     gap: 1vw;
     background-color: var(--color-1);
@@ -69,6 +68,8 @@
 .project_title {
     font-size: 2vw;
     font-weight: bold;
+    text-align: center;
+
 }
 
 .project_text {
@@ -80,4 +81,6 @@
     margin: 0;
     font-size: 1.6vw;
     font-family: var(--font-3);
+    text-align: justify;
+
 }
