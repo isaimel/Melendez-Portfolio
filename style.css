@@ -11,9 +11,10 @@
 
     --color-3: black;
     --color-3-triple: 0 0 0;
-    --slides_dimension: max(32vw, 14rem + 16vw);
+    --slides_dimension: calc(16vw + 14rem);
     --font-1: 'Roboto Serif';
-    --font-2: 'Inter';
+    --font-2: 'Be Vietnam Pro';
+    --font-3: 'Cabin';
 
     --font-size:
 }
@@ -40,7 +41,7 @@ body div {
 
 a:link,
 a:visited {
-    color: var(--color-1);
+    color: var(--color-2);
 }
 
 .header {
@@ -105,7 +106,14 @@ button:hover {
 }
 
 .footer {
-    color: var(--color-1);
+    background:
+        linear-gradient(rgb(var(--color-1-triple) / 85%),
+            rgb(var(--color-1-triple) / 85%)),
+        url("assets/traditional/large_leaf_flower.png");
+    background-position: bottom;
+    background-size: cover;
+    border: 0;
+    color: var(--color-2);
     padding: .4rem .8rem;
     height: max(12vw, 10vw + 2rem);
 }

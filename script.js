@@ -39,6 +39,7 @@ async function addAllProjects(projects_container, jsonData) {
 
     var projectTitle = document.createElement("span");
     var projectDescription = document.createElement("p");
+    projectDescription.classList.add("project_description");
 
     projectTitle.innerHTML = projectInfo["headline"];
     projectTitle.classList.add("project_title");

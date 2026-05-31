@@ -2,7 +2,7 @@
     "projects":{
         "thesis_project": {
             "type": "video",
-            "headline": "Preserving Artistry in Automated Terrain Generation Using <br> Wave Function Collapse",
+            "headline": "Automating Terrain Generation Using Wave Function Collapse",
             "links": ["GkSij1V7D1A"],
             "description": "TEST1",
             "direction": "row"
@@ -18,7 +18,8 @@
             "type": "image",
             "headline": "The Tulip Princess Tradition: 3 Years of Design",
             "links": ["merchandise/tulip_allison.png", "merchandise/tulip_maddy.png", "merchandise/tulip_kelly.png"],
-            "description": "TEST1",
+            "description": 
+            "An annual tradition reignited by Jonathan Edwards (JE) College in 2022, the Tulip Princess title is bestowed upon the student who “most embodies the spirit of the tulip,” carrying themselves with dignity, strength, and camaraderie. Merchandise featuring the Tulip Princess is designed through collaboration and conversation with the elected student and the college administration, ensuring the former's wants are met while complying with the latter's needs. <br>I have had the honor of developing the design for the 3<sup>rd</sup> and 4<sup>th</sup> Tulip Princesses, incorporating Lee’s desired allusions to Greek muses and romantic paintings and Corson’s to justice and morality. The design for the 5<sup>th</sup> Tulip Princess is currently in progress. ",
             "direction": "column"
         },
         "dndWebsite": {
