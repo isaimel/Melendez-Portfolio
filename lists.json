@@ -11,7 +11,8 @@
             "type": "video",
             "headline": "Building a Game Engine: Defending Your Farm",
             "links": ["wGFAiUFf8XQ"],
-            "description": "TEST1",
+            "description": 
+            "&emsp;I incrementally built a video game engine in a semester-long course taught in the DLang. Throughout a variety of exercises, namely replicating Super Mario Bros. and Space Invaders, I implemented and refined game objects, their respective components (texture, transform, collision, animation), custom scripts, input managers, acceleration-based movement, tailing cameras, and scene trees.<br><br>&emsp;Our final project was a group assignment of two parts: building a tile set editor and a video game of at least three levels. Our group “BAPI” (an acronym of our first names) developed a charming farming game with defensive and offensive mechanics, defending crops from hostile entities to harvest enough produce to advance to the following level.<br><br>&emsp;My contributions to the project include the majority of player functions (input, movement, and interactions with collision blocks, tools, weapons, and enemies); tilemap, world, and array conversions (storing game objects as array entries, placing them at world coordinates, and spawning them from tilemap data); and game entity interactions (player with tools, tools with the game world, weapons with enemies, enemies with planted crops, and enemies with the player).",
             "direction": "row"
         },
         "tulip": {
@@ -19,7 +20,7 @@
             "headline": "The Tulip Princess Tradition: 3 Years of Design",
             "links": ["merchandise/tulip_allison.png", "merchandise/tulip_maddy.png", "merchandise/tulip_kelly.png"],
             "description": 
-            "&emsp;An annual tradition reignited by Jonathan Edwards (JE) College in 2022, the Tulip Princess title is bestowed upon the student who “most embodies the spirit of the tulip,” carrying themselves with dignity, strength, and camaraderie. Merchandise featuring the Tulip Princess is designed through collaboration and conversation with the elected student and the college administration, ensuring the former's wants are met while complying with the latter's needs. <br>&emsp;I have had the honor of developing the design for the 3<sup>rd</sup> and 4<sup>th</sup> Tulip Princesses, incorporating Lee’s desired allusions to Greek muses and romantic paintings and Corson’s to justice and morality. The design for the 5<sup>th</sup> Tulip Princess is currently in progress.",
+            "&emsp;An annual tradition reignited by Jonathan Edwards (JE) College in 2022, the Tulip Princess title is bestowed upon the student who “most embodies the spirit of the tulip,” carrying themselves with dignity, strength, and camaraderie. Merchandise featuring the Tulip Princess is designed through collaboration and conversation with the elected student and the college administration, ensuring the former's wants are met while complying with the latter's needs. <br><br>&emsp;I have had the honor of developing the design for the 3<sup>rd</sup> and 4<sup>th</sup> Tulip Princesses, incorporating Lee’s desired allusions to Greek muses and romantic paintings and Corson’s to justice and morality. The design for the 5<sup>th</sup> Tulip Princess is currently in progress.",
             "direction": "column"
         },
         "dndWebsite": {
