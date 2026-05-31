@@ -38,7 +38,7 @@
         "graphics": ["drum_set.png", "electric_guitar.png", "fancy_JE_text.png", "keyboard.png", "microphone.png", "saxophone.png", "trumpet.png", "violin.png"],
         "advertisements": ["accent_sun.png", "apple_picking.png", "cpa_poster.png", "late_night_nuggets.png", "next_to_normal_thin.png", "next_to_normal_wide.png", "spider_ball_swing.png", "spider_cider.png", "tea_for_tuesday.png", "tulip_protection.png"],
         "traditional": ["blue_ice_cream.png", "blue_jay.png", "cat_commission.png", "chicken_rice.png", "coffee_cup.png", "flan.png", "koi_fish.png", "large_leaf_flower.png", "maine_ocean.png", "random_breakfast.png", "rats_and_boba.png", "red_panda.png", "salmon_flower.png", "salvadoran_sweets.png", "shiba_gift.png", "snoopy_commission.png", "sunflower.png", "totoro_gift.png", "willoughbys_heart.png", "yellow_flowers.png"],
-        "miscellaneous": ["graphics_final.gif", "moth_practice.png", "abstract_spider.png", "couple_commission.png", "desk_study.jpg", "digital_final.gif"]
+        "miscellaneous": ["graphics_final.gif", "moth_practice.png", "thesis_poster.png", "abstract_spider.png", "couple_commission.png", "desk_study.jpg", "digital_final.gif"]
     },
     "descriptions":{
         "merchandise": {
@@ -99,6 +99,7 @@
             "abstract_spider.png": "An assignment for a digital art course.",
             "couple_commission.png": "A commission for a couple's anniversary.",
             "desk_study.jpg": "An assignment for a digital art course.",
+            "thesis_poster.png": "Poster for my Computing and the Arts senior thesis project.",
             "digital_final.gif": "The final assignment for a digital arts course."
         }
     }
