@@ -46,7 +46,7 @@ a:visited {
 
 .header {
     color: var(--color-2);
-    height: calc(18vw + 4rem);
+    height: calc(10vw + 8rem);
     background:
         linear-gradient(rgb(var(--color-1-triple) / 85%),
             rgb(var(--color-1-triple) / 85%)),

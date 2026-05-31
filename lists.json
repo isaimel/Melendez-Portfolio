@@ -4,7 +4,8 @@
             "type": "video",
             "headline": "Automating Terrain Generation Using Wave Function Collapse",
             "links": ["GkSij1V7D1A"],
-            "description": "TEST1",
+            "description": 
+            "&emsp;For the Computing and the Arts major, I explored procedural terrain generation — stemming from both a personal interest in video games and an intersection between both fields. While I enjoy the intricacy and level of detail of hand-crafted environments, the creation process is often time-consuming and difficult to scale. Purely algorithmic generation, while fast and endlessly customizable, frequently lacks a distinct visual identity and is difficult to modify for unique art styles and odd geometry.<br><br>&emsp; To mitigate the drawbacks of both approaches while retaining scalability, configurability, and aesthetics, the Wave Function Collapse (WFC) was explored and implemented. WFC finds seamless connections between hand-made modular assets to build a series of adjacency rules: four rotations per asset and six connection points per rotation. The algorithm begins with an empty 3D grid whose cells exist in multiple states — one per asset rotation. The primary loop finds and collapses the cell with the fewest possibilities into a single state, propagating that information outward and eliminating states in neighboring cells that would violate adjacency rules. The loop terminates if a cell with zero possibilities is encountered or when all cells are collapsed.<br><br>&emsp;Blender, its  Python API, and Unity were utilized to model and program the project. For its installation in the Undergraduate Thesis Exhibition, I presented a visual representation of the algorithm building its terrain, accompanied by gradients to highlight its modular nature and sounds for every asset placement.",
             "direction": "row"
         },
         "game_engine": {
@@ -27,7 +28,8 @@
             "type": "website",
             "headline": "DnD Dice Roller",
             "links": ["https://isaimel.github.io/DND-Website/"],
-            "description": "TEST1",
+            "description": 
+            "&emsp;As a fan of the tabletop role-playing game Dungeons & Dragons, I often find myself forgetting the set of dice needed to properly join the fun. As part of a website-design course, we were assigned to utilize HTML, CSS, and JavaScript to design a website tailored for our personal use; I elected to design an online dice roller capable of rolling a single or multiple dice at once, with their values and sums displayed to avoid repetitive calculations. <br><br>&emsp;While other websites offer similar functionality, my implementation prioritizes visuals and fun interactivity as opposed to plain text, as the user can click any number of dice, each animating and changing output before landing on a single value, mimicking the tumbling of a physical die. <br><br>&emsp;The website, further improved with added features and optimizations, represents a rare intersection of hobby and professional practice.",
             "direction": "row"
         }
     },
