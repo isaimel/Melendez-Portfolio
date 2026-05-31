@@ -1,13 +1,13 @@
 const jsonFileURL = 'https://isaimel.github.io/Current-Website-Project/lists.json';
 
 const Display = Object.freeze({
-  SCROLL:   Symbol("scroll"),
-  ALL:  Symbol("all")
+  SCROLL: Symbol("scroll"),
+  ALL: Symbol("all")
 });
 
 const Orientation = Object.freeze({
-  PORTRAIT:   Symbol("portrait"),
-  LANDSCAPE:  Symbol("landscape")
+  PORTRAIT: Symbol("portrait"),
+  LANDSCAPE: Symbol("landscape")
 });
 
 fetch(jsonFileURL)
@@ -20,13 +20,13 @@ fetch(jsonFileURL)
   })
   .catch(error => console.log('Error during fetch: ' + error.message));
 
-async function addAllProjects(projects_container, jsonData){
+async function addAllProjects(projects_container, jsonData) {
   var allPromises = [];
-  for (const project of Object.values(jsonData.projects)){
+  for (const project of Object.values(jsonData.projects)) {
     allPromises.push(createProject(project).then(projectDiv => projects_container.appendChild(projectDiv)));
   }
   return Promise.all(allPromises)
-  
+
   async function createProject(projectInfo) {
     var projectDiv = document.createElement("div");
     var projectTextDiv = document.createElement("div");
@@ -75,11 +75,11 @@ async function addAllProjects(projects_container, jsonData){
         websiteDiv.classList.add("website_container");
       }
     }
-      return projectDiv;
+    return projectDiv;
   }
 }
 
-function galleryFunctionality(gallery, jsonData){
+function galleryFunctionality(gallery, jsonData) {
   const lightboxContainer = document.getElementById('lightboxContainer');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxDescription = lightboxContainer.querySelector("span");
@@ -111,16 +111,16 @@ function galleryFunctionality(gallery, jsonData){
 
   var currentTab = Object.keys(tabData)[0];
 
-  initializeGallery();    
+  initializeGallery();
 
-  async function initializeGallery(){
+  async function initializeGallery() {
     await loadTabs();
     imageDict[currentTab] = await loadImages(currentTab, 0, 3);
 
     selectTab(currentTab);
     centerImage.addEventListener('click', () => {
       rewriteLightbox('flex', centerImage.src, centerImage.alt);
-      applyImageStyle(lightboxImg, centerImage.ratio , 'max(40vw, 18rem + 18vw)');
+      applyImageStyle(lightboxImg, centerImage.ratio, 'max(40vw, 18rem + 18vw)');
     });
 
     await loadFirstThrees();
@@ -130,15 +130,15 @@ function galleryFunctionality(gallery, jsonData){
     galleryHeader.addEventListener("click", () => swapGallery())
     lightboxContainer.addEventListener('click', () => rewriteLightbox('none', '', ""));
   }
-  function swapGallery(){
-    if (currentGallery == Display.SCROLL){
+  function swapGallery() {
+    if (currentGallery == Display.SCROLL) {
       currentGallery = Display.ALL;
       galleryHeader.textContent = "Display scroll gallery"
       slideshowContainer.style.display = 'none';
       tabGalleriesContainer.style.display = '';
       selectTab(currentTab);
     }
-    else{
+    else {
       currentGallery = Display.SCROLL;
       galleryHeader.textContent = "Display full gallery";
       slideshowContainer.style.display = '';
@@ -163,7 +163,7 @@ function galleryFunctionality(gallery, jsonData){
     return Promise.all(promises);
   }
 
-  function loadImages(tabName, startIndex, endIndex){
+  function loadImages(tabName, startIndex, endIndex) {
     var tabList = [];
     for (let i = startIndex; i < endIndex; i++) {
       tabList.push(loadImage(tabName, i));
@@ -172,7 +172,7 @@ function galleryFunctionality(gallery, jsonData){
   }
 
   function loadImage(tabName, imageIndex, parentPath = 'https://isaimel.github.io/Current-Website-Project/assets/') {
-    return new Promise ((resolve) => {
+    return new Promise((resolve) => {
       var img = new Image();
       var imageName = tabData[tabName][imageIndex];
       var imagePath = `${parentPath}${tabName}/${imageName}`;
@@ -182,7 +182,7 @@ function galleryFunctionality(gallery, jsonData){
         img.ratio = img.naturalWidth > img.naturalHeight ? Orientation.LANDSCAPE : Orientation.PORTRAIT;
         img.addEventListener('click', () => {
           rewriteLightbox('flex', img.src, img.alt);
-          applyImageStyle(lightboxImg, img.ratio , 'max(40vw, 18rem + 18vw)')
+          applyImageStyle(lightboxImg, img.ratio, 'max(40vw, 18rem + 18vw)')
         });
         tabGalleries[tabName].appendChild(img);
         resolve(img);
@@ -190,14 +190,14 @@ function galleryFunctionality(gallery, jsonData){
       img.onerror = () => resolve(img);
     });
   }
-  function rewriteLightbox(displayStyle, imageSource, imageAlt){
+  function rewriteLightbox(displayStyle, imageSource, imageAlt) {
     lightboxContainer.style.display = displayStyle;
     lightboxImg.src = imageSource;
     lightboxDescription.innerHTML = imageAlt;
   }
 
-  function loadTabs(){
-    return new Promise ((resolve) => {
+  function loadTabs() {
+    return new Promise((resolve) => {
       for (const key in tabData) {
         var tabDiv = document.createElement("div");
         var galleryDiv = document.createElement("div");
@@ -205,7 +205,7 @@ function galleryFunctionality(gallery, jsonData){
         tabDivList[key] = tabDiv;
         tabGalleries[key] = galleryDiv;
         tabDiv.textContent = key.replace(/^./, char => char.toUpperCase());
-        
+
         tabContainer.appendChild(tabDiv);
         tabGalleriesContainer.appendChild(galleryDiv);
       }
@@ -213,28 +213,28 @@ function galleryFunctionality(gallery, jsonData){
     });
   }
 
-  function addTabFunctionality(){
+  function addTabFunctionality() {
     for (const key in tabDivList) {
       tabDivList[key].addEventListener("mouseover", () => swapTab(key));
     }
   }
 
-  function addButtonFunctionality(){
+  function addButtonFunctionality() {
     leftButton.addEventListener("click", () => plusDivs(-1));
-    rightButton.addEventListener("click", () => plusDivs(1));       
+    rightButton.addEventListener("click", () => plusDivs(1));
   }
-  
-  function selectTab(newTabName){
+
+  function selectTab(newTabName) {
     var oldTabName = currentTab;
     var oldDiv = tabDivList[oldTabName];
     oldDiv.style.backgroundColor = '';
     oldDiv.style.color = '';
-    
-    
+
+
     var newDiv = tabDivList[newTabName];
     newDiv.style.backgroundColor = "var(--color-1)";
     newDiv.style.color = "var(--color-2)";
-    
+
     currentTab = newTabName;
     if (currentGallery == Display.SCROLL) showDivs();
     else showGallery(oldTabName);
@@ -251,23 +251,23 @@ function galleryFunctionality(gallery, jsonData){
   function showDivs() {
     var pathList = imageDict[currentTab];
 
-    var leftImg   = pathList[modLoop(middleImgInd - 1, pathList.length)];
+    var leftImg = pathList[modLoop(middleImgInd - 1, pathList.length)];
     var centerImg = pathList[middleImgInd];
-    var rightImg  = pathList[modLoop(middleImgInd + 1, pathList.length)];
+    var rightImg = pathList[modLoop(middleImgInd + 1, pathList.length)];
 
-    leftImage.src   = leftImg.src;
+    leftImage.src = leftImg.src;
     centerImage.src = centerImg.src;
-    rightImage.src  = rightImg.src;
+    rightImage.src = rightImg.src;
 
     centerImage.alt = centerImg.alt;
     centerImage.ratio = centerImg.ratio;
     itemDescription.innerHTML = centerImg.alt;
 
-    applyImageStyle(leftImage,   leftImg.ratio);
+    applyImageStyle(leftImage, leftImg.ratio);
     applyImageStyle(centerImage, centerImg.ratio);
-    applyImageStyle(rightImage,  rightImg.ratio);
+    applyImageStyle(rightImage, rightImg.ratio);
   }
-  function showGallery(oldTab){
+  function showGallery(oldTab) {
     tabGalleries[oldTab].style.display = '';
     tabGalleries[currentTab].style.display = 'flex';
   }
@@ -277,7 +277,7 @@ function galleryFunctionality(gallery, jsonData){
   }
 }
 function applyImageStyle(imgElement, ratio, percent = '100%') {
-  if (ratio === undefined) ratio = Orientation.PORTRAIT; 
+  if (ratio === undefined) ratio = Orientation.PORTRAIT;
   if (ratio == Orientation.LANDSCAPE) {
     imgElement.style.width = percent;
     imgElement.style.height = 'auto';
@@ -286,7 +286,7 @@ function applyImageStyle(imgElement, ratio, percent = '100%') {
     imgElement.style.width = 'auto';
   }
 }
-function modLoop(n, cap){
+function modLoop(n, cap) {
   if (n >= cap) {
     return 0
   }
@@ -296,7 +296,7 @@ function modLoop(n, cap){
   return n;
 }
 function loadImageSimple(imageLocation, parentPath = 'https://isaimel.github.io/Current-Website-Project/assets/') {
-  return new Promise ((resolve) => {
+  return new Promise((resolve) => {
     var img = new Image();
     img.src = `${parentPath}/${imageLocation}`;
     img.onload = () => {
@@ -312,21 +312,21 @@ function createYTFrame(videoID) {
     videoId: videoID
   });
 }
-function prepareYoutubeAPI(){
-    const projects = document.getElementById("projects");
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0]
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+function prepareYoutubeAPI() {
+  const projects = document.getElementById("projects");
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0]
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
 function onYouTubeIframeAPIReady() {
   fetch(jsonFileURL)
     .then(response => response.json())
     .then(jsonData => fillYoutubeIFrames(document.getElementById("projects")));
 }
-function fillYoutubeIFrames(parentDiv){
+function fillYoutubeIFrames(parentDiv) {
   var allFrames = parentDiv.querySelectorAll(".youtube_iframe");
-    allFrames.forEach(frame => {
+  allFrames.forEach(frame => {
     createYTFrame(frame.id)
   });
 }

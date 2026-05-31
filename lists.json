@@ -23,7 +23,7 @@
         },
         "dndWebsite": {
             "type": "website",
-            "headline": "Website Exercise",
+            "headline": "DnD Dice Roller",
             "links": ["https://isaimel.github.io/DND-Website/"],
             "description": "TEST1",
             "direction": "row"

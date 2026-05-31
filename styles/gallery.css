@@ -28,22 +28,23 @@
     overflow: hidden;
 }
 
-#first_page_gallery div{
+#first_page_gallery div {
     width: 100%;
 }
 
 .tab_container {
     flex-direction: row;
     width: 100%;
-    height: max(5vw, 2.4rem);
-    font-size: max(1.6vw, .8rem);
+    height: 5vw;
+    font-size: 1.6vw;
 }
-.tab_container div{
-  flex: 1;
-  height: 100%;
-  user-select: none;
-  background-color: var(--color-2);
-  color: var(--color-1);
+
+.tab_container div {
+    flex: 1;
+    height: 100%;
+    user-select: none;
+    background-color: var(--color-2);
+    color: var(--color-1);
 }
 
 .slideshow_container {
@@ -58,7 +59,9 @@
     gap: 1vw 10vw;
 }
 
-.left_image, .center_image, .right_image {
+.left_image,
+.center_image,
+.right_image {
     height: 100%;
     width: 100%;
     background-color: var(--color-1);
@@ -68,45 +71,53 @@
     justify-self: center;
 }
 
-.center_image{
+.center_image {
     cursor: pointer;
 }
- 
-.all_container{
+
+.all_container {
     background: var(--color-1);
 }
-.all_container div{
+
+.all_container div {
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    gap: 4vw;
+    gap: 2vw;
     flex: 1;
     padding: 4vw 0;
     box-sizing: border-box;
 }
-.all_container img{
-    height: max(24vw);
+
+.all_container img {
+    height: 20vw;
     cursor: pointer;
     width: auto;
 }
-.all_container img:hover{
+
+.all_container img:hover {
     transform: scale(1.1);
     filter: saturate(1.1);
 }
-.swap_layout{
+
+.swap_layout {
     user-select: none;
     cursor: pointer;
     font-size: 2vw;
+    background-color: var(--color-1);
+    color: var(--color-2);
     opacity: 1;
+    padding: .4vw .6vw;
 }
 
-.slideshow_left, .slideshow_right {
+.slideshow_left,
+.slideshow_right {
     position: absolute;
     z-index: 2;
 }
 
-.slideshow_left{
+.slideshow_left {
     left: .4rem;
 }
 
@@ -114,20 +125,20 @@
     right: .4rem;
 }
 
-.item_description{
-  display: none;
-  align-items: start;
-  color: var(--color-2);
-  width: 100%;
-  height: max(5.5vw, 3.6rem);
-  text-align: center;
-  font-size: max(1.4vw, .7rem);
-  padding: .5vw;
-  grid-column: 2 / 2;
+.item_description {
+    display: none;
+    align-items: start;
+    color: var(--color-2);
+    width: 100%;
+    height: max(5.5vw, 3.6rem);
+    text-align: center;
+    font-size: max(1.4vw, .7rem);
+    padding: .5vw;
+    grid-column: 2 / 2;
 }
 
-.item_description p{
-  margin: 0;
-  width: 45vw;
-  /* font-size: max(1.0vw, .4rem); */
+.item_description p {
+    margin: 0;
+    width: 45vw;
+    /* font-size: max(1.0vw, .4rem); */
 }

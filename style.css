@@ -14,6 +14,8 @@
     --slides_dimension: max(32vw, 14rem + 16vw);
     --font-1: 'Roboto Serif';
     --font-2: 'Inter';
+
+    --font-size:
 }
 
 body {
@@ -23,10 +25,11 @@ body {
     align-items: center;
     margin: 0;
     font-family: var(--font-2);
-    gap: 6vw;
+    gap: 5vw;
     background-color: var(--color-2);
 }
-body div{
+
+body div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,56 +38,58 @@ body div{
     width: 100%;
 }
 
-a:link, a:visited {
-  color: var(--color-1);
+a:link,
+a:visited {
+    color: var(--color-1);
 }
 
-.header{
+.header {
     color: var(--color-2);
-    height: max(22vw, 18vw + 2rem);
+    height: 20vw;
     background:
-    linear-gradient(
-        rgb(var(--color-1-triple) / 85%),
-        rgb(var(--color-1-triple) / 85%)
-    ),
-    url("assets/traditional/large_leaf_flower.png");
+        linear-gradient(rgb(var(--color-1-triple) / 85%),
+            rgb(var(--color-1-triple) / 85%)),
+        url("assets/traditional/large_leaf_flower.png");
     background-position: center;
     background-size: cover;
     border: 0;
     font-family: var(--font-1);
 }
-button{
+
+.name {
+    height: fit-content;
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.sub_name {
+    font-size: 2vw;
+    font-family: var(--font-2);
+}
+
+button {
     border: none;
     cursor: pointer;
     padding: .2rem .4rem;
     opacity: 0.8;
-    background-color: var(--color-1);
+    background-color: var(--color-3);
     color: var(--color-2);
     font-size: 1.5rem;
     justify-content: center;
     align-items: center;
 }
+
 button:hover {
     opacity: 1;
 }
-.section_title{
+
+.section_title {
     color: var(--color-1);
-    font-size: max(5vw, 1.6rem);
+    font-size: 4vw;
     background-color: inherit;
     margin: 0 0 .6vw 0;
     font-family: var(--font-1);
     font-weight: bold;
-}
-
-.name{
-  height: fit-content;
-  font-size: max(8vw, 4vw + 1rem);
-  font-weight: bold;
-}
-
-.sub_name{
-  font-size: max(2vw, 1rem);
-  font-family: var(--font-2);
 }
 
 @keyframes initialZoom {
@@ -98,7 +103,8 @@ button:hover {
         opacity: 1;
     }
 }
-.footer{
+
+.footer {
     color: var(--color-1);
     padding: .4rem .8rem;
     height: max(12vw, 10vw + 2rem);
