@@ -61,7 +61,7 @@ async function createProject(projectInfo) {
   projectTextDiv.classList.add("project_text");
 
   projectDiv.classList.add("project");
-  projectDiv.style.flexDirection = projectInfo["direction"];
+  projectDiv.style.flexDirection = projectInfo["direction_short"];
 
   var mediaContainer = document.createElement("div");
   mediaContainer.classList.add("media_container");
@@ -82,7 +82,7 @@ async function createProject(projectInfo) {
   swapTextButton.addEventListener("click", () => {
     expanded = !expanded;
 
-    projectDescription.innerHTML = expanded ? projectInfo["description"] : projectInfo["short"];
+    projectDescription.innerHTML = expanded ? projectInfo["long"] : projectInfo["short"];
 
     swapTextButton.innerHTML = expanded ? "Show Less" : "Show More";
   });

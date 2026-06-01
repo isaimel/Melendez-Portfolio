@@ -10,9 +10,8 @@
 .project {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: justify;
-    gap: 1vw;
+    text-align: left;
+    gap: 2vw;
     background-color: var(--color-1);
     color: var(--color-2);
     padding: 2vw 2vw;
@@ -66,10 +65,9 @@
 }
 
 .project_title {
-    font-size: 2vw;
+    font-size: calc(2vw + .4rem);
     font-weight: bold;
     text-align: center;
-
 }
 
 .project_text {
@@ -80,9 +78,9 @@
 .project_description {
     top: 0;
     margin: 0;
-    font-size: calc(.6vw + .4rem);
+    font-size: calc(1vw + .4rem);
     font-family: var(--font-3);
-    text-align: justify;
+    text-align: left;
 }
 
 #projects button{
