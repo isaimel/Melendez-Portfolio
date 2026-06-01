@@ -25,7 +25,6 @@ function fillBiography(bio_container, jsonData) {
 
   var accDiv = bio_container.querySelector(".accomplishments");
   var blurbDiv = bio_container.querySelector(".personal_blurb");
-  var effDiv = bio_container.querySelector(".efficiencies");
   var resumeLink = bio_container.querySelector(".resume");
 
   bioData["accomplishments"].forEach((accomplishment) => {
@@ -35,12 +34,6 @@ function fillBiography(bio_container, jsonData) {
   });
 
   blurbDiv.innerHTML = bioData["biography"];
-
-  bioData["efficiencies"].forEach((efficiency) => {
-    var efficienciesSpan = document.createElement("span");
-    efficienciesSpan.innerHTML = efficiency;
-    effDiv.appendChild(efficienciesSpan);
-  });
 
   resumeLink.href =
     "https://isaimel.github.io/Current-Website-Project/assets/" +

@@ -7,10 +7,11 @@
     display: grid;
     height: max(fit-content, var(--slides_dimension));
     width: 100%;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: min-content;
+    grid-template-columns: 1fr 1.5fr;
     gap: 2vw;
     padding: 0 2vw;
+    font-size: calc(1.5vw + .2rem);
 }
 
 .about_me div {
@@ -30,7 +31,6 @@
 
 .accomplishments {
     gap: 1vw;
-    font-size: max(2vw, 1rem);
     padding: 0 1vw;
     text-align: center;
 }
@@ -38,7 +38,6 @@
 .personal_blurb {
     align-items: left;
     padding: 2vw;
-    font-size: max(1.5vw, .8rem);
 }
 
 .personal_blurb span {
@@ -48,8 +47,4 @@
 .resume:link,
 .resume:visited {
     color: var(--color-1);
-}
-
-.efficiencies{
-    text-align: center;
 }
