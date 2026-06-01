@@ -104,13 +104,12 @@
 .swap_layout {
     user-select: none;
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 1.6vw;
     color: var(--color-1);
     opacity: 1;
     padding: .4vw .6vw;
     z-index: 100;
-    justify-self: flex-end;
-    align-self: flex-end;
+
 }
 
 .slideshow_left,

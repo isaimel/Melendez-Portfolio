@@ -1,10 +1,9 @@
 .about_me {
     display: grid;
     width: 80%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 2vw;
-    padding: 0 2vw;
-    font-size: calc(1vw + .3rem);
+    font-size: calc(1.2vw + .1rem);
     align-items: stretch;
 }
 
@@ -15,10 +14,10 @@
 }
 
 .left_side img {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    flex: 1;
+    width:auto;
+    height: calc(22vw + 6rem);
+    /* object-fit: cover; */
+    /* flex: 1; */
 }
 
 .accomplishments {
@@ -27,6 +26,5 @@
 }
 
 .personal_blurb {
-    padding: 2vw;
     display: flex;
 }
