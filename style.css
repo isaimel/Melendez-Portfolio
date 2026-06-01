@@ -112,8 +112,12 @@ button:hover {
         url("assets/traditional/large_leaf_flower.png");
     background-position: bottom;
     background-size: cover;
+    text-align: center;
     border: 0;
     color: var(--color-2);
     padding: .4rem .8rem;
     height: max(12vw, 10vw + 2rem);
+}
+.footer a{
+    color: var(--color-2);
 }

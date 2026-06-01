@@ -35,7 +35,7 @@
     },
     "tabs": {
         "merchandise": ["las_aranas_white.png", "tulip_allison.png", "bread_and_circuses_white.png", "je_sux_skew_white.png",  "tulip_maddy.png", "je_sux_center_white.png"],
-        "graphics": ["drum_set.png", "electric_guitar.png", "fancy_JE_text.png", "keyboard.png", "microphone.png", "saxophone.png", "trumpet.png", "violin.png"],
+        "graphics": ["drum_set.png", "trumpet.png", "violin.png", "electric_guitar.png", "fancy_JE_text.png", "keyboard.png", "microphone.png", "saxophone.png"],
         "advertisements": ["accent_sun.png", "apple_picking.png", "cpa_poster.png", "late_night_nuggets.png", "next_to_normal_thin.png", "next_to_normal_wide.png", "spider_ball_swing.png", "spider_cider.png", "tea_for_tuesday.png", "tulip_protection.png"],
         "traditional": ["blue_ice_cream.png", "blue_jay.png", "cat_commission.png", "chicken_rice.png", "coffee_cup.png", "flan.png", "koi_fish.png", "large_leaf_flower.png", "maine_ocean.png", "random_breakfast.png", "rats_and_boba.png", "red_panda.png", "salmon_flower.png", "salvadoran_sweets.png", "shiba_gift.png", "snoopy_commission.png", "sunflower.png", "totoro_gift.png", "willoughbys_heart.png", "yellow_flowers.png"],
         "miscellaneous": ["graphics_final.gif", "moth_practice.png", "abstract_spider.png", "couple_commission.png", "desk_study.jpg", "digital_final.gif"]

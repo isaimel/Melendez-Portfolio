@@ -22,27 +22,31 @@ fetch(jsonFileURL)
 
   function fillBiography(bio_container, jsonData){
     var bioData = jsonData.biography;
-    var accDiv = gallery.querySelector(".accomplishments");
-    var blurbDiv = gallery.querySelector(".personal_blurb");
-    var effDiv = gallery.querySelector(".efficiencies");
-    var resumeLink = gallery.querySelector(".resume");
+
+    var accDiv = bio_container.querySelector(".accomplishments");
+    var blurbDiv = bio_container.querySelector(".personal_blurb");
+    var effDiv = bio_container.querySelector(".efficiencies");
+    var resumeLink = bio_container.querySelector(".resume");
 
     bioData["accomplishments"].forEach((accomplishment) => {
       var accomplishmentSpan = document.createElement("span");
       accomplishmentSpan.innerHTML = accomplishment;
-      accDiv.appendChild(accomplishmentSpan)
+      accDiv.appendChild(accomplishmentSpan);
     });
 
-    blurb.innerHTML = bioData["biography"];
+    blurbDiv.innerHTML = bioData["biography"];
 
     bioData["efficiencies"].forEach((efficiency) => {
       var efficienciesSpan = document.createElement("span");
       efficienciesSpan.innerHTML = efficiency;
-      effDiv.appendChild(efficienciesSpan)
+      effDiv.appendChild(efficienciesSpan);
     });
-    resumeLink.href = "https://isaimel.github.io/Current-Website-Project/assets/" + bioData["resume_link"];
 
+    resumeLink.href =
+      "https://isaimel.github.io/Current-Website-Project/assets/" +
+      bioData["resume_link"];
   }
+  
   async function addAllProjects(projects_container, jsonData) {
     var allPromises = [];
     for (const project of Object.values(jsonData.projects)) {

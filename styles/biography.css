@@ -1,5 +1,7 @@
 #biography{
-    color: var(--color-1)
+    color: var(--color-1);
+    width: 95%;
+    gap: 1vw;
 }
 .about_me {
     display: grid;
@@ -40,4 +42,13 @@
 
 .personal_blurb span {
     font-size: max(3vw, 1.6rem);
+}
+
+.resume:link,
+.resume:visited {
+    color: var(--color-1);
+}
+
+.efficiencies{
+    text-align: center;
 }
