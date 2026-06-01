@@ -5,7 +5,7 @@
 }
 .about_me {
     display: grid;
-    height: var(--slides_dimension);
+    height: max(fit-content, var(--slides_dimension));
     width: 100%;
     grid-template-rows: auto;
     grid-template-columns: 1fr auto 1fr;

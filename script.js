@@ -20,91 +20,109 @@ fetch(jsonFileURL)
   })
   .catch(error => console.log('Error during fetch: ' + error.message));
 
-  function fillBiography(bio_container, jsonData){
-    var bioData = jsonData.biography;
+function fillBiography(bio_container, jsonData) {
+  var bioData = jsonData.biography;
 
-    var accDiv = bio_container.querySelector(".accomplishments");
-    var blurbDiv = bio_container.querySelector(".personal_blurb");
-    var effDiv = bio_container.querySelector(".efficiencies");
-    var resumeLink = bio_container.querySelector(".resume");
+  var accDiv = bio_container.querySelector(".accomplishments");
+  var blurbDiv = bio_container.querySelector(".personal_blurb");
+  var effDiv = bio_container.querySelector(".efficiencies");
+  var resumeLink = bio_container.querySelector(".resume");
 
-    bioData["accomplishments"].forEach((accomplishment) => {
-      var accomplishmentSpan = document.createElement("span");
-      accomplishmentSpan.innerHTML = accomplishment;
-      accDiv.appendChild(accomplishmentSpan);
-    });
+  bioData["accomplishments"].forEach((accomplishment) => {
+    var accomplishmentSpan = document.createElement("span");
+    accomplishmentSpan.innerHTML = accomplishment;
+    accDiv.appendChild(accomplishmentSpan);
+  });
 
-    blurbDiv.innerHTML = bioData["biography"];
+  blurbDiv.innerHTML = bioData["biography"];
 
-    bioData["efficiencies"].forEach((efficiency) => {
-      var efficienciesSpan = document.createElement("span");
-      efficienciesSpan.innerHTML = efficiency;
-      effDiv.appendChild(efficienciesSpan);
-    });
+  bioData["efficiencies"].forEach((efficiency) => {
+    var efficienciesSpan = document.createElement("span");
+    efficienciesSpan.innerHTML = efficiency;
+    effDiv.appendChild(efficienciesSpan);
+  });
 
-    resumeLink.href =
-      "https://isaimel.github.io/Current-Website-Project/assets/" +
-      bioData["resume_link"];
+  resumeLink.href =
+    "https://isaimel.github.io/Current-Website-Project/assets/" +
+    bioData["resume_link"];
+}
+
+async function addAllProjects(projects_container, jsonData) {
+  var allPromises = [];
+  for (const project of Object.values(jsonData.projects)) {
+    allPromises.push(createProject(project).then(projectDiv => projects_container.appendChild(projectDiv)));
   }
-  
-  async function addAllProjects(projects_container, jsonData) {
-    var allPromises = [];
-    for (const project of Object.values(jsonData.projects)) {
-      allPromises.push(createProject(project).then(projectDiv => projects_container.appendChild(projectDiv)));
+  return Promise.all(allPromises)
+}
+
+async function createProject(projectInfo) {
+  var projectDiv = document.createElement("div");
+  var projectTextDiv = document.createElement("div");
+  projectTextDiv.classList.add("project_text");
+
+  projectDiv.classList.add("project");
+  projectDiv.style.flexDirection = projectInfo["direction"];
+
+  var mediaContainer = document.createElement("div");
+  mediaContainer.classList.add("media_container");
+
+  var projectTitle = document.createElement("span");
+  projectTitle.classList.add("project_title");
+  projectTitle.innerHTML = projectInfo["headline"];
+
+  var projectDescription = document.createElement("p");
+  projectDescription.classList.add("project_description");
+  projectDescription.innerHTML = projectInfo["short"];
+
+  var swapTextButton = document.createElement("button");
+  swapTextButton.textContent = "Show More";
+
+  let expanded = false;
+
+  swapTextButton.addEventListener("click", () => {
+    expanded = !expanded;
+
+    projectDescription.innerHTML = expanded ? projectInfo["description"] : projectInfo["short"];
+
+    swapTextButton.innerHTML = expanded ? "Show Less" : "Show More";
+  });
+
+  projectDiv.appendChild(mediaContainer);
+
+  projectTextDiv.appendChild(projectTitle);
+  projectTextDiv.appendChild(projectDescription);
+  projectTextDiv.appendChild(swapTextButton);
+
+  projectDiv.appendChild(projectTextDiv);
+
+  if (projectInfo["type"] === "video") {
+    for (const videoID of projectInfo["links"]) {
+      var videoToReplace = document.createElement("div");
+      videoToReplace.id = videoID;
+      videoToReplace.classList.add("youtube_iframe");
+      mediaContainer.appendChild(videoToReplace);
     }
-    return Promise.all(allPromises)
-
-  async function createProject(projectInfo) {
-    var projectDiv = document.createElement("div");
-    var projectTextDiv = document.createElement("div");
-    projectTextDiv.classList.add("project_text");
-    projectDiv.classList.add("project");
-    projectDiv.style.flexDirection = projectInfo["direction"];
-
-    var mediaContainer = document.createElement("div");
-    mediaContainer.classList.add("media_container")
-
-    var projectTitle = document.createElement("span");
-    var projectDescription = document.createElement("p");
-    projectDescription.classList.add("project_description");
-
-    projectTitle.innerHTML = projectInfo["headline"];
-    projectTitle.classList.add("project_title");
-
-    projectDescription.innerHTML = projectInfo["description"];
-
-    projectDiv.appendChild(mediaContainer);
-    projectTextDiv.appendChild(projectTitle);
-    projectTextDiv.appendChild(projectDescription);
-    projectDiv.appendChild(projectTextDiv);
-
-    if (projectInfo["type"] === "video") {
-      for (const videoID of projectInfo["links"]) {
-        var videoToReplace = document.createElement("div");
-        videoToReplace.id = videoID;
-        videoToReplace.classList.add("youtube_iframe");
-        mediaContainer.appendChild(videoToReplace);
-      }
-    }
-    else if (projectInfo["type"] === "image") {
-      for (const imageID of projectInfo["links"]) {
-        mediaContainer.appendChild(await loadImageSimple(imageID));
-      }
-    }
-    else if (projectInfo["type"] === "website") {
-      for (const imageID of projectInfo["links"]) {
-        var websiteFrame = document.createElement("iframe");
-        websiteFrame.src = imageID;
-        websiteFrame.classList.add("website_iframe");
-
-        var websiteDiv = document.createElement("div");
-        websiteDiv.appendChild(websiteFrame);
-        mediaContainer.appendChild(websiteDiv);
-        websiteDiv.classList.add("website_container");
-      }
-    }
-    return projectDiv;
   }
+  else if (projectInfo["type"] === "image") {
+    for (const imageID of projectInfo["links"]) {
+      mediaContainer.appendChild(await loadImageSimple(imageID));
+    }
+  }
+  else if (projectInfo["type"] === "website") {
+    for (const websiteURL of projectInfo["links"]) {
+      var websiteFrame = document.createElement("iframe");
+      websiteFrame.src = websiteURL;
+      websiteFrame.classList.add("website_iframe");
+
+      var websiteDiv = document.createElement("div");
+      websiteDiv.classList.add("website_container");
+
+      websiteDiv.appendChild(websiteFrame);
+      mediaContainer.appendChild(websiteDiv);
+    }
+  }
+
+  return projectDiv;
 }
 
 function galleryFunctionality(gallery, jsonData) {
