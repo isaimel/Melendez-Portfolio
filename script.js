@@ -25,7 +25,6 @@ function fillBiography(bio_container, jsonData) {
 
   var accDiv = bio_container.querySelector(".accomplishments");
   var blurbDiv = bio_container.querySelector(".personal_blurb");
-  var resumeLink = bio_container.querySelector(".resume");
 
   bioData["accomplishments"].forEach((accomplishment) => {
     var accomplishmentSpan = document.createElement("span");
@@ -34,10 +33,6 @@ function fillBiography(bio_container, jsonData) {
   });
 
   blurbDiv.innerHTML = bioData["biography"];
-
-  resumeLink.href =
-    "https://isaimel.github.io/Current-Website-Project/assets/" +
-    bioData["resume_link"];
 }
 
 async function addAllProjects(projects_container, jsonData) {
