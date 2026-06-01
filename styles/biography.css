@@ -1,42 +1,32 @@
-#biography{
-    color: var(--color-1);
-    width: 95%;
-    gap: 1vw;
-}
 .about_me {
     display: grid;
-    grid-template-columns: auto auto;
+    width: 80%;
+    grid-template-columns: 1fr 1.2fr;
     gap: 2vw;
-    width: 100%;
     padding: 0 2vw;
-    
+    font-size: calc(1vw + .3rem);
+    align-items: stretch;
 }
 
-.about_me div {
-    box-sizing: content-box;
-    padding: 0;
+.left_side {
+    display: flex;
+    flex-direction: column;
+    gap: .6vw;
+}
+
+.left_side img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    flex: 1;
 }
 
 .accomplishments {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: .6vw;
-}
-
-.accomplishments img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    animation: initialZoom 0.8s ease-in-out;
 }
 
 .personal_blurb {
-    align-items: left;
     padding: 2vw;
-}
-
-.resume:link,
-.resume:visited {
-    color: var(--color-1);
+    display: flex;
 }

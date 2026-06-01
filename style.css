@@ -116,7 +116,7 @@ button:hover {
     border: 0;
     color: var(--color-2);
     padding: .4rem .8rem;
-    height: max(12vw, 10vw + 2rem);
+    height: fit-content;
 }
 .footer a{
     color: var(--color-2);
