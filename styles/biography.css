@@ -32,6 +32,7 @@
     gap: 1vw;
     font-size: max(2vw, 1rem);
     padding: 0 1vw;
+    text-align: center;
 }
 
 .personal_blurb {
