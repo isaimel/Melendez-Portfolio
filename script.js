@@ -33,6 +33,14 @@ fetch(jsonFileURL)
       accDiv.appendChild(accomplishmentSpan)
     });
 
+    blurb.innerHTML = bioData["biography"];
+
+    bioData["efficiencies"].forEach((efficiency) => {
+      var efficienciesSpan = document.createElement("span");
+      efficienciesSpan.innerHTML = efficiency;
+      effDiv.appendChild(efficienciesSpan)
+    });
+    resumeLink.href = "https://isaimel.github.io/Current-Website-Project/assets/" + bioData["resume_link"];
 
   }
   async function addAllProjects(projects_container, jsonData) {

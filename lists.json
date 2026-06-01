@@ -110,10 +110,11 @@
             ],
         "biography": 
             "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-        "interests": 
+        "efficiencies": 
             [
                 "Adobe Suite (Photoshop, Premiere Pro, Fresco, InDesign), Procreate, Canva",
                 "Python, C, C#, C++, D, Javascript, Latex, HTML, CSS"
-            ]
+            ],
+        "resume_link": "individual/Isai_Melendez_Resume.pdf"
     }
 }
