@@ -1,7 +1,7 @@
 .about_me {
     display: grid;
     width: 80%;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2vw;
     padding: 0 2vw;
     font-size: calc(1vw + .3rem);
