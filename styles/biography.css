@@ -1,4 +1,4 @@
-.biography{
+#biography{
     color: var(--color-1)
 }
 .about_me {
@@ -26,18 +26,18 @@
     animation: initialZoom 0.8s ease-in-out;
 }
 
-.study {
+.accomplishments {
     gap: 1vw;
     font-size: max(2vw, 1rem);
     padding: 0 1vw;
 }
 
-.bio {
+.personal_blurb {
     align-items: left;
     padding: 2vw;
     font-size: max(1.5vw, .8rem);
 }
 
-.bio span {
+.personal_blurb span {
     font-size: max(3vw, 1.6rem);
 }

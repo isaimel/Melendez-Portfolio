@@ -14,18 +14,33 @@ fetch(jsonFileURL)
   .then(response => response.json())
   .then(jsonData => {
     prepareYoutubeAPI();
-    const first_page_gallery = document.getElementById("first_page_gallery");
-    galleryFunctionality(first_page_gallery, jsonData);
+    galleryFunctionality(document.getElementById("first_page_gallery"), jsonData);
     addAllProjects(document.getElementById("projects"), jsonData);
+    fillBiography(document.getElementById("biography"), jsonData);
   })
   .catch(error => console.log('Error during fetch: ' + error.message));
 
-async function addAllProjects(projects_container, jsonData) {
-  var allPromises = [];
-  for (const project of Object.values(jsonData.projects)) {
-    allPromises.push(createProject(project).then(projectDiv => projects_container.appendChild(projectDiv)));
+  function fillBiography(bio_container, jsonData){
+    var bioData = jsonData.biography;
+    var accDiv = gallery.querySelector(".accomplishments");
+    var blurbDiv = gallery.querySelector(".personal_blurb");
+    var effDiv = gallery.querySelector(".efficiencies");
+    var resumeLink = gallery.querySelector(".resume");
+
+    bioData["accomplishments"].forEach((accomplishment) => {
+      var accomplishmentSpan = document.createElement("span");
+      accomplishmentSpan.innerHTML = accomplishment;
+      accDiv.appendChild(accomplishmentSpan)
+    });
+
+
   }
-  return Promise.all(allPromises)
+  async function addAllProjects(projects_container, jsonData) {
+    var allPromises = [];
+    for (const project of Object.values(jsonData.projects)) {
+      allPromises.push(createProject(project).then(projectDiv => projects_container.appendChild(projectDiv)));
+    }
+    return Promise.all(allPromises)
 
   async function createProject(projectInfo) {
     var projectDiv = document.createElement("div");

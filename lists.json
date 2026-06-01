@@ -101,5 +101,19 @@
             "desk_study.jpg": "An assignment for a digital art course.",
             "digital_final.gif": "The final assignment for a digital arts course."
         }
+    },
+    "biography":{
+        "accomplishments": 
+            [
+                "Computing and the Arts (B.A.)",
+                "Yale College Student Marshal"
+            ],
+        "biography": 
+            "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+        "interests": 
+            [
+                "Adobe Suite (Photoshop, Premiere Pro, Fresco, InDesign), Procreate, Canva",
+                "Python, C, C#, C++, D, Javascript, Latex, HTML, CSS"
+            ]
     }
 }
