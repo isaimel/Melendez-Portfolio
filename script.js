@@ -1,4 +1,4 @@
-const jsonFileURL = 'https://isaimel.github.io/Current-Website-Project/lists.json';
+const jsonFileURL = 'https://isaimel.github.io/Melendez-Portfolio/lists.json';
 
 const Display = Object.freeze({
   SCROLL: Symbol("scroll"),
@@ -205,7 +205,7 @@ function galleryFunctionality(gallery, jsonData) {
     return Promise.all(tabList);
   }
 
-  function loadImage(tabName, imageIndex, parentPath = 'https://isaimel.github.io/Current-Website-Project/assets/') {
+  function loadImage(tabName, imageIndex, parentPath = 'https://isaimel.github.io/Melendez-Portfolio/assets/') {
     return new Promise((resolve) => {
       var img = new Image();
       var imageName = tabData[tabName][imageIndex];
@@ -329,7 +329,7 @@ function modLoop(n, cap) {
   }
   return n;
 }
-function loadImageSimple(imageLocation, parentPath = 'https://isaimel.github.io/Current-Website-Project/assets/') {
+function loadImageSimple(imageLocation, parentPath = 'https://isaimel.github.io/Melendez-Portfolio/assets/') {
   return new Promise((resolve) => {
     var img = new Image();
     img.src = `${parentPath}/${imageLocation}`;
