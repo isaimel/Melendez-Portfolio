@@ -83,7 +83,7 @@ async function createProject(projectInfo) {
     expanded = !expanded;
 
     projectDescription.innerHTML = expanded ? projectInfo["long"] : projectInfo["short"];
-
+    projectDiv.style.flexDirection = expanded ? projectInfo["direction_long"] : projectInfo["direction_short"];
     swapTextButton.innerHTML = expanded ? "Show Less" : "Show More";
   });
 
