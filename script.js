@@ -238,8 +238,7 @@ function galleryFunctionality(gallery, jsonData) {
 
         tabDivList[key] = tabDiv;
         tabGalleries[key] = galleryDiv;
-        tabDiv.textContent = key.replace(/^./, char => char.toUpperCase());
-
+        tabDiv.textContent = key.replace(/\b\w/g, char => char.toUpperCase());
         tabContainer.appendChild(tabDiv);
         tabGalleriesContainer.appendChild(galleryDiv);
       }
