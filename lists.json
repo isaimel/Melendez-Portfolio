@@ -46,7 +46,7 @@
         }
     },
     "tabs": {
-        "merchandise": ["las_aranas_white.png", "tulip_allison.png", "bread_and_circuses_white.png", "je_sux_skew_white.png",  "tulip_maddy.png", "je_sux_center_white.png"],
+        "merchandise": ["las_aranas_white.png", "tulip_kelly.png", "tulip_allison.png", "bread_and_circuses_white.png", "je_sux_skew_white.png",  "tulip_maddy.png", "je_sux_center_white.png"],
         "graphics": ["drum_set.png", "trumpet.png", "violin.png", "electric_guitar.png", "fancy_JE_text.png", "keyboard.png", "microphone.png", "saxophone.png"],
         "advertisements": ["accent_sun.png", "apple_picking.png", "cpa_poster.png", "late_night_nuggets.png", "next_to_normal_thin.png", "next_to_normal_wide.png", "spider_ball_swing.png", "spider_cider.png", "tea_for_tuesday.png", "tulip_protection.png"],
         "fine arts": ["blue_ice_cream.png", "blue_jay.png", "cat_commission.png", "chicken_rice.png", "coffee_cup.png", "flan.png", "koi_fish.png", "large_leaf_flower.png", "maine_ocean.png", "random_breakfast.png", "rats_and_boba.png", "red_panda.png", "salmon_flower.png", "salvadoran_sweets.png", "shiba_gift.png", "snoopy_commission.png", "sunflower.png", "totoro_gift.png", "willoughbys_heart.png", "yellow_flowers.png"],
@@ -55,6 +55,7 @@
     "descriptions":{
         "merchandise": {
             "las_aranas_white.png": "Logo for the Jonathan Edwards College Latine student group founded in 2026, Las Arañas.",
+            "tulip_kelly.png": "Design for the 5<sup>th</sup> Tulip Princess of the Jonathan Edwards College, a title bestowed to a student who embodies the \"spirit of the tulip.\"",
             "tulip_allison.png": "Design for the 3<sup>rd</sup> Tulip Princess of the Jonathan Edwards College, a title bestowed to a student who embodies the \"spirit of the tulip.\"",
             "bread_and_circuses_white.png": "Logo for the Yale University society founded in 2025, Bread & Circuses.",
             "je_sux_center_white.png": "Design for the Jonathan Edwards College store displaying the college's motto and mascot.",
@@ -124,7 +125,7 @@
             "&emsp;Often working on clothing merchandise and event flyers, my graphic design prioritizes bold colors and well-defined graphics, lettering, and shapes, organized cleanly to ensure the necessary information is conveyed. By upholding strong, frequent communication, I ensure a project's needs are met while giving the idea a distinct creative interpretation.<br><br>&emsp;When taking a break from digital work, I delve into traditional watercolor painting; I illustrate landscapes, buildings, flora, and fauna, finding both tranquility and mild frustration at the unpredictable flow of the medium. Although I am working towards a carefree style, I can’t help but draw within the lines. Much like my graphic design work, I experiment and draw inspiration from other artists to learn what does and doesn’t work for me.<br><br>&emsp;I have extensive experience with the Adobe Suite (Photoshop, Fresco, InDesign, Illustrator), Procreate, and Canva. Additionally, I am well-versed in C, C++, D, Python, LaTeX, HTML, CSS, and JavaScript.",
         "efficiencies": 
             [
-                "Adobe Suite (Photoshop, Premiere Pro, Fresco, InDesign), Procreate, Canva",
+                "Adobe Suite (Photoshop, Premiere Pro, Fresco, InDesign), Procreate, Canva, Figma, Blender, Unity",
                 "Python, C, C#, C++, D, Javascript, Latex, HTML, CSS"
             ]
     }
