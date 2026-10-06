@@ -1,0 +1,26 @@
+#personal-blurb{
+    display: grid;
+    width: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    gap: 1rem;
+}
+#portrait{
+    height: 32rem;
+    width: auto;
+    border-radius: 10%;
+}
+.portrait-wing{
+    height: calc(8rem + 10vw);
+    width: auto;
+}
+#greeting{
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+    font-size: 4rem;
+
+}

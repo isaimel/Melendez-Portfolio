@@ -1,0 +1,36 @@
+@import "styles/header-style.css"; /* Using a string */
+@import "styles/personal-blurb.css"; /* Using a string */
+
+:root {
+    --primary-bg-color: white; /* global scope */
+    --primary-txt-color: black; /* global scope */
+}
+html{
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    justify-content: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+    width: 90%;
+    margin: 0;
+}
+button {
+    text-decoration: none;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.2rem;
+    font-size: inherit;
+    width: fit-content;
+    height: fit-content;
+    box-sizing:unset;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
