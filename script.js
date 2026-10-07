@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function headerFunctionality() {
         let navMenuHor = document.getElementById("nav-menu-hor");
-        let navMenuVert = document.getElementById("nav-menu-vert");
         let navButton = document.getElementById("nav-button");
         var minWidth = 800;
         var oldWidth = document.documentElement.clientWidth;
@@ -24,19 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 navMenuHor.style.display = "";
                 navButton.style.display = "";
                 navMenuHor.style.fontSize = "";
-                // navMenuVert.style.display = ""
-                // navMenuVert.style.fontSize == "1.4rem"
             }
             oldWidth = newWidth;
         }
         function toggleNavContentOn() {
-            // if (navMenuVert.style.display == "flex") {
-            //     navMenuVert.style.display = "";
-            // }
-            // else {
-            //     navMenuVert.style.display = "flex";
-            // }
-            
             if (navMenuHor.style.display == "none") {
                 navMenuHor.style.display = "";
                 navMenuHor.style.fontSize = ".9rem";
@@ -60,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let centralBodySpan = centralBody.querySelector("span");
         let rightWingSpan = rightWing.querySelector("span");
 
+        let blurbText = document.getElementById("blurb-text");
+
         var minWidth = 800;
         var oldWidth = document.documentElement.clientWidth;
 
@@ -76,22 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
         function alterIndex(direction){
             if (direction == 0) return;
             ind = modLoop(ind + direction, listSize);
-            console.log(ind);
             updateDisplay();
         }
 
         function updateDisplay() {
             var newWidth = document.documentElement.clientWidth;
+            var leftInd = modLoop(ind - 1, listSize);
+            var rightInd = modLoop(ind + 1, listSize);
 
-            centralBodyImg.src = personalData[modLoop(ind, listSize)]["link-sign"];
-            centralBodySpan.textContent = personalData[modLoop(ind, listSize)]["title"];
+            centralBodyImg.src = personalData[ind]["link-sign"];
+            centralBodySpan.textContent = personalData[ind]["title"];
+            listsToPara(blurbText, personalData[ind]["paragraphs"]);
+            
+            leftWingImg.src = personalData[leftInd]["link"];
+            rightWingImg.src = personalData[rightInd]["link"];
+
 
             if (newWidth <= minWidth) return;
-            leftWingImg.src = personalData[modLoop(ind - 1, listSize)]["link"];
-            leftWingSpan.textContent = personalData[modLoop(ind - 1, listSize)]["title"];
-
-            rightWingImg.src = personalData[modLoop(ind + 1, listSize)]["link"];
-            rightWingSpan.textContent = personalData[modLoop(ind + 1, listSize)]["title"];
+            leftWingSpan.textContent = personalData[leftInd]["title"];
+            rightWingSpan.textContent = personalData[rightInd]["title"];
         }
         function handleResize() {
             var newWidth = document.documentElement.clientWidth;
@@ -122,5 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function modLoop(dangerIndex, modAmount) {
         return ((dangerIndex % modAmount) + modAmount) % modAmount;
+    }
+    function listsToPara(parentDiv, list){
+        for (let item in list){
+            var p = document.createElement('p');
+            p.innerHTML = item;
+            parentDiv.appendChild(p);
+        }
     }
 });

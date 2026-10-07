@@ -2,12 +2,11 @@
     display: grid;
     width: 100%;
     grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 32rem 1fr;
+    grid-template-columns: 1fr 28rem 1fr;
     justify-content: center;
     justify-items: center;
     align-items: center;
     text-align: center;
-    font-size: 1.4rem;
     gap: 1rem;
     margin: 6rem 0 0 0;
 }
@@ -19,6 +18,7 @@
 #left-wing, #central-body, #right-wing{
     cursor: pointer;
     border-radius: 10%;
+    font-size: calc(1.6vw);
 }
 #left-wing img, #right-wing img{
     height: auto;
@@ -35,4 +35,9 @@
 }
 #left-wing:hover, #central-body:hover, #right-wing:hover{
     cursor: pointer;
+}
+#blurb-text{
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
 }
