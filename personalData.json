@@ -1,14 +1,19 @@
 [
     {
         "title": "The Programmer",
-        "link": "./assets/misc/programmer.jpg"
+        "link": "./assets/misc/programmer/programmer.png",
+        "link-sign": "./assets/misc/programmer/programmer.gif"
+
     },
     {
         "title": "The Person",
-        "link": "./assets/misc/personal.gif"
+        "link": "./assets/misc/personal/personal.png",
+        "link-sign": "./assets/misc/personal/personal.gif"
     },
     {
         "title": "The Artist",
-        "link": "./assets/misc/artist.jpg"
+        "link": "./assets/misc/artist/artist.png",
+        "link-sign": "./assets/misc/artist/artist.gif"
+
     }
 ]

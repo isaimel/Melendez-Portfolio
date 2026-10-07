@@ -23,16 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
             if (newWidth > minWidth) {
                 navMenuHor.style.display = "";
                 navButton.style.display = "";
-                navMenuVert.style.display = ""
+                navMenuHor.style.fontSize = "";
+                // navMenuVert.style.display = ""
+                // navMenuVert.style.fontSize == "1.4rem"
             }
             oldWidth = newWidth;
         }
         function toggleNavContentOn() {
-            if (navMenuVert.style.display == "flex") {
-                navMenuVert.style.display = "";
+            // if (navMenuVert.style.display == "flex") {
+            //     navMenuVert.style.display = "";
+            // }
+            // else {
+            //     navMenuVert.style.display = "flex";
+            // }
+            
+            if (navMenuHor.style.display == "none") {
+                navMenuHor.style.display = "";
+                navMenuHor.style.fontSize = ".9rem";
             }
             else {
-                navMenuVert.style.display = "flex";
+                navMenuHor.style.display = "none";
             }
         }
     }
@@ -73,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         function updateDisplay() {
             var newWidth = document.documentElement.clientWidth;
 
-            centralBodyImg.src = personalData[modLoop(ind, listSize)]["link"];
+            centralBodyImg.src = personalData[modLoop(ind, listSize)]["link-sign"];
             centralBodySpan.textContent = personalData[modLoop(ind, listSize)]["title"];
 
             if (newWidth <= minWidth) return;
