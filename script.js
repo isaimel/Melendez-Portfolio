@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         var minWidth = 800;
         var oldWidth = document.documentElement.clientWidth;
+        var blurbDict = {};
 
         var listSize = personalData.length;
         var ind = 1;
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         rightWingImg.addEventListener("click", () => alterIndex(1));
         
         handleResize();
+        updateCentralBlurb();
 
         function alterIndex(direction){
             if (direction == 0) return;
@@ -78,15 +80,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             centralBodyImg.src = personalData[ind]["link-sign"];
             centralBodySpan.textContent = personalData[ind]["title"];
-            listsToPara(blurbText, personalData[ind]["paragraphs"]);
             
             leftWingImg.src = personalData[leftInd]["link"];
             rightWingImg.src = personalData[rightInd]["link"];
 
+            updateCentralBlurb();
 
             if (newWidth <= minWidth) return;
             leftWingSpan.textContent = personalData[leftInd]["title"];
             rightWingSpan.textContent = personalData[rightInd]["title"];
+        }
+        function updateCentralBlurb(){
+            if (!(ind in blurbDict)){
+                blurbDict[ind] = listsToPara(personalData[ind]["paragraphs"]);
+            }
+            blurbText.replaceChildren();
+            blurbText.append(...blurbDict[ind]);
         }
         function handleResize() {
             var newWidth = document.documentElement.clientWidth;
@@ -118,11 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function modLoop(dangerIndex, modAmount) {
         return ((dangerIndex % modAmount) + modAmount) % modAmount;
     }
-    function listsToPara(parentDiv, list){
-        for (let item in list){
+    function listsToPara(list){
+        let returnList = [];
+        for (let index in list){
             var p = document.createElement('p');
-            p.innerHTML = item;
-            parentDiv.appendChild(p);
+            p.textContent = list[index];
+            returnList.push(p);
         }
+        return returnList;
     }
 });
