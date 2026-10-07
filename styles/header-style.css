@@ -6,10 +6,12 @@
     align-items: center;
     top: 0;
     font-size: 1.4rem;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     width: 100%;
-    margin: 0 0 4rem 0;
+    margin: 0 0 0 0;
     background-color: var(--primary-bg-color);
+    border-bottom: .1rem solid var(--primary-txt-color);
+    box-sizing: border-box;
 }
 #header-top{
     display: flex;
@@ -52,7 +54,9 @@
     grid-row: 2;
     justify-self: end;
     align-items: end;
-    background-color: color-mix(in srgb, var(--primary-bg-color) 90%, transparent);    padding: .4rem;
+    /* background-color: color-mix(in srgb, var(--primary-bg-color) 90%, transparent);     */
+    background-color: var(--primary-bg-color);    
+    padding: .4rem .4rem .4rem .4rem;
     border-radius: 0 0 10% 10%;
     
 }

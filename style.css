@@ -3,6 +3,7 @@
 
 :root {
     --primary-bg-color: white; /* global scope */
+    --secondary-bg-color: black; /* global scope */
     --primary-txt-color: black; /* global scope */
 }
 html{
