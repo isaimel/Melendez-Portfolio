@@ -1,35 +1,24 @@
-[
-    {
-        "title": "The Programmer",
+{
+    "Programmer": {
         "link": "./assets/misc/programmer/programmer.png",
         "link-sign": "./assets/misc/programmer/programmer.gif",
         "paragraphs": [
             "On the first part of the journey, I was lookin' at all the life. There were plants and birds and rocks and things. There was sand and hills and rings. The first thing I met was a fly with a buzz, and the sky with no clouds. The heat was hot, and the ground was dry, but the air was full of sound.",
-            "I've been through the desert on a horse with no name. It felt good to be out of the rain. In the desert, you can remember your name, 'cause there ain't no one for to give you no pain.",
-            "La, la, la-la-la-la, la-la-la, la, la. La, la, la-la-la-la, la-la-la, la, la.",
-            "After two days in the desert sun, my skin began to turn red. After three days in the desert fun, I was lookin' at a river bed. And the story it told of a river that flowed made me sad to think it was dead."
+            "I've been through the desert on a horse with no name. It felt good to be out of the rain. In the desert, you can remember your name, 'cause there ain't no one for to give you no pain."
         ]
-
     },
-    {
-        "title": "The Person",
+    "Person": {
         "link": "./assets/misc/personal/personal.png",
         "link-sign": "./assets/misc/personal/personal.gif",
         "paragraphs": [
             "Raindrops are falling on my head, and just like the guy whose feet are too big for his bed, nothing seems to fit. Those raindrops are falling on my head, they keep falling.",
-            "So I just did me some talking to the sun, and I said I didn't like the way he got things done, sleeping on the job. Those raindrops are falling on my head, they keep fallin'.",
-            "But there's one thing I know: the blues they send to meet me won't defeat me. It won't be long 'til happiness steps up to greet me.",
-            "Raindrops keep falling on my head, but that doesn't mean my eyes will soon be turning red. Crying's not for me, 'cause I'm never gonna stop the rain by complaining. Because I'm free, nothing's worrying me."
-        ]
+            "So I just did me some talking to the sun, and I said I didn't like the way he got things done, sleeping on the job. Those raindrops are falling on my head, they keep fallin'."        ]
     },
-    {
-        "title": "The Artist",
+    "Artist": {
         "link": "./assets/misc/artist/artist.png",
         "link-sign": "./assets/misc/artist/artist.gif",
         "paragraphs": [
-            "馬鹿みたい 子供なのね。夢を追って傷ついて、嘘が下手なくせに 笑えない笑顔みせた。",
-            "I love youも ろくに言わない。口下手でほんまに不器用。なのになのにどうして、サヨナラは言えたの。",
-            "だめだね だめよ だめなのよ。あんたが 好きで好きすぎて。どれだけ 強いお酒でも、歪まない思い出が 馬鹿みたい。"
+            "馬鹿みたい 子供なのね。夢を追って傷ついて、嘘が下手なくせに 笑えない笑顔みせた。"
         ]
     }
-]
+}

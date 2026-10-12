@@ -2,15 +2,15 @@
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto;
-    /* position: sticky; */
     align-items: center;
     top: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 1rem 2rem;
     width: 100%;
-    background-color: var(--primary-bg-color);
     box-sizing: border-box;
-    /* border-bottom: .1rem solid color-mix(in srgb, var(--primary-txt-color) 50%, transparent);*/
+    color: var(--primary-txt-color);
+    margin: 0 0 .4rem 0;
+
 }
 #header-top{
     display: flex;
@@ -30,8 +30,6 @@
     padding: 0;
     grid-column: 1;
     grid-row: 1;
-    background-color: var(--primary-bg-color);
-    color: var(--primary-txt-color);
     animation: slideToRight .15s ease-out;
 }
 #header-name {
@@ -49,7 +47,7 @@
 #nav-menu-hor{
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 @keyframes slideToRight {

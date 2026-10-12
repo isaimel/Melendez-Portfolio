@@ -1,0 +1,37 @@
+#nav-button {
+    display: none;
+    padding: 0;
+    grid-column: 1;
+    grid-row: 1;
+    animation: slideToRight .15s ease-out;
+}
+
+#header-name {
+    height: 1.25em;
+    width: auto;
+}
+
+#header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@keyframes slideToRight {
+    0% {
+        transform: translateX(400%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

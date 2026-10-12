@@ -1,114 +1,106 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     headerFunctionality();
-    bioRotationFunctionality()
-
+    bioRotationFunctionality();
     async function headerFunctionality() {
-        let navMenuHor = document.getElementById("nav-menu-hor");
+        const State = {
+            MINI: "mini",
+            FULL: "full",
+        };
+
+        let navMenu = document.getElementById("nav-menu");
         let navButton = document.getElementById("nav-button");
-        var minWidth = 800;
-        var oldWidth = document.documentElement.clientWidth;
+        var minWidth = 600;
         handleResize();
 
         window.addEventListener("resize", handleResize);
-        navButton.addEventListener("click", toggleNavContentOn);
+        navButton.addEventListener("click", toggleNavMenu);
 
         function handleResize() {
             var newWidth = document.documentElement.clientWidth;
-            if (newWidth <= minWidth && (oldWidth > minWidth || newWidth == oldWidth)) {
-                navMenuHor.style.display = "none";
-                navButton.style.display = "flex";
+            if (newWidth <= minWidth && getDisplay(navButton) == "") {
+                setDisplay(navMenu, "none");
+                setDisplay(navButton, "flex");
+                navMenuStyle(State.MINI)
             }
             if (newWidth > minWidth) {
-                navMenuHor.style.display = "";
-                navButton.style.display = "";
-                navMenuHor.style.fontSize = "";
+                resetAllStyles();
             }
-            oldWidth = newWidth;
         }
-        function toggleNavContentOn() {
-            if (navMenuHor.style.display == "none") {
-                navMenuHor.style.display = "";
-                navMenuHor.style.fontSize = ".9rem";
+        function navMenuStyle(state) {
+            if (state == State.MINI) {
+                navMenu.style.fontSize = ".8rem";
+                navMenu.style.gap = "1rem";
+            }
+            else if (state == State.FULL) {
+                navMenu.style.fontSize = "";
+                navMenu.style.gap = "";
+            }
+        }
+        function toggleNavMenu() {
+            if (navMenu.style.display == "none") {
+                setDisplay(navMenu, "")
             }
             else {
-                navMenuHor.style.display = "none";
+                setDisplay(navMenu, "none");
             }
         }
+        function resetAllStyles(){
+            setDisplay(navButton);
+            setDisplay(navMenu);
+            navMenuStyle(State.FULL) 
+        }
+
     }
     async function bioRotationFunctionality() {
         const personalData = await getJSONData('./personalData.json');
-        let leftWing = document.getElementById("left-wing");
-        let centralBody = document.getElementById("central-body");
-        let rightWing = document.getElementById("right-wing");
-
-        let leftWingImg = leftWing.querySelector("img");
-        let centralBodyImg = centralBody.querySelector("img");
-        let rightWingImg = rightWing.querySelector("img");
-
-        let leftWingSpan = leftWing.querySelector("span");
-        let centralBodySpan = centralBody.querySelector("span");
-        let rightWingSpan = rightWing.querySelector("span");
-
+        let portrait = document.getElementById("blurb").querySelector("img");
+        let personalities = document.getElementById("personalities");
+        let blurbTitle = document.getElementById("blurb-title");
         let blurbText = document.getElementById("blurb-text");
 
-        var minWidth = 800;
-        var oldWidth = document.documentElement.clientWidth;
-        var blurbDict = {};
+        let keys = Object.keys(personalData);
 
-        var listSize = personalData.length;
-        var ind = 1;
+        let keyToDiv = {};
+        let keyToImg = {};
+        let currKey = null;
 
-        window.addEventListener("resize", handleResize);
-        leftWingImg.addEventListener("click", () => alterIndex(-1));
-        centralBodyImg.addEventListener("click", () => alterIndex(0));
-        rightWingImg.addEventListener("click", () => alterIndex(1));
-        
-        handleResize();
-        updateCentralBlurb();
-
-        function alterIndex(direction){
-            if (direction == 0) return;
-            ind = modLoop(ind + direction, listSize);
-            updateDisplay();
+        for (const key of keys) {
+            let dict = personalData[key];
+            let img = createImage(dict["link"], key, key);
+            img.style.outline = "none";
+            personalities.appendChild(img);
+            keyToImg[key] = img;
+            img.addEventListener("click", () => replacePortrait(key));
         }
+        replacePortrait("Person");
 
-        function updateDisplay() {
-            var newWidth = document.documentElement.clientWidth;
-            var leftInd = modLoop(ind - 1, listSize);
-            var rightInd = modLoop(ind + 1, listSize);
+        function replacePortrait(key) {
+            if (currKey == key) return;
 
-            centralBodyImg.src = personalData[ind]["link-sign"];
-            centralBodySpan.textContent = personalData[ind]["title"];
-            
-            leftWingImg.src = personalData[leftInd]["link"];
-            rightWingImg.src = personalData[rightInd]["link"];
-
-            updateCentralBlurb();
-
-            if (newWidth <= minWidth) return;
-            leftWingSpan.textContent = personalData[leftInd]["title"];
-            rightWingSpan.textContent = personalData[rightInd]["title"];
-        }
-        function updateCentralBlurb(){
-            if (!(ind in blurbDict)){
-                blurbDict[ind] = listsToPara(personalData[ind]["paragraphs"]);
+            if (!(key in keyToDiv)) {
+                let newDiv = getParagraphDiv(personalData[key]["paragraphs"]);
+                newDiv.style.display = "none"
+                keyToDiv[key] = newDiv;
+                blurbText.appendChild(newDiv);
             }
-            blurbText.replaceChildren();
-            blurbText.append(...blurbDict[ind]);
-        }
-        function handleResize() {
-            var newWidth = document.documentElement.clientWidth;
-            if (newWidth <= minWidth && (oldWidth > minWidth || newWidth == oldWidth)) {
-                leftWingSpan.innerHTML = "";
-                rightWingSpan.innerHTML = "";
-            }
-            else if (newWidth > minWidth && oldWidth > minWidth){
-                updateDisplay();
-            }
-            oldWidth = newWidth;
-        }
 
+            if (currKey) {
+                keyToImg[currKey].classList.remove("selected");
+                keyToDiv[currKey].style.display = "none";
+            }
+
+            keyToImg[key].classList.add("selected");
+            portrait.src = personalData[key]["link-sign"];
+            keyToDiv[key].style.display = "block";
+            currKey = key;
+        }
+    }
+
+    function setDisplay(el, newValue = "") {
+        el.style.display = newValue;
+    }
+    function getDisplay(el) {
+        return el.style.display;
     }
     async function getJSONData(filepath) {
         try {
@@ -123,17 +115,24 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error(error.message);
         }
     }
-
     function modLoop(dangerIndex, modAmount) {
         return ((dangerIndex % modAmount) + modAmount) % modAmount;
     }
-    function listsToPara(list){
-        let returnList = [];
+    function getParagraphDiv(list){
+        let newDiv = document.createElement("div");;
         for (let index in list){
             var p = document.createElement('p');
             p.textContent = list[index];
-            returnList.push(p);
+            newDiv.appendChild(p);
         }
-        return returnList;
+        return newDiv;
+    }
+    
+    function createImage(src, alt, title) {
+        var img = document.createElement('img');
+        img.src = src;
+        if ( alt != null ) img.alt = alt;
+        if ( title != null ) img.title = title;
+        return img;
     }
 });
