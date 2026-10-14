@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     async function bioRotationFunctionality() {
-        const personalData = await getJSONData('./personalData.json');
+        const personalData = await getJSONData('./data-files/personalData.json');
         let portrait = document.getElementById("blurb").querySelector("img");
         let personalities = document.getElementById("personalities");
         let blurbTitle = document.getElementById("blurb-title");
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     async function galleryFunctionality() {
         const hostDomain = 'https://pub-c083c836a8cb4bdf85a4f6ffe05ef891.r2.dev';
-        const portfolioData = await getJSONData('./portfolioData.json');
+        const portfolioData = await getJSONData('./data-files/portfolioData.json');
         let galleriesContainer = document.getElementById("galleries-container");
         let galleryCategories = document.getElementById("gallery-categories");
 

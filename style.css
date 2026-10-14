@@ -1,7 +1,7 @@
-@import "styles/header-section.css";
-@import "styles/about-me-section.css";
-@import "styles/gallery-section.css";
-@import "styles/lightbox.css";
+@import "./styles/header-section.css";
+@import "./styles/about-me-section.css";
+@import "./styles/gallery-section.css";
+@import "./styles/lightbox.css";
 
 html {
     display: flex;
