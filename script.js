@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     headerFunctionality();
     bioRotationFunctionality();
+    galleryFunctionality();
+    const lightboxContainer = document.getElementById('lightboxContainer');
+    const lightboxImg = document.getElementById('lightboxImg');
+    let lbLeft = document.getElementById("lb-left");
+    let lbRight = document.getElementById("lb-right");
+    let currLightboxTarget = null;
+    let currLightboxInd = -1;
+
     async function headerFunctionality() {
         const State = {
             MINI: "mini",
@@ -44,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 setDisplay(navMenu, "none");
             }
         }
-        function resetAllStyles(){
+        function resetAllStyles() {
             setDisplay(navButton);
             setDisplay(navMenu);
-            navMenuStyle(State.FULL) 
+            navMenuStyle(State.FULL)
         }
 
     }
@@ -95,7 +103,98 @@ document.addEventListener("DOMContentLoaded", () => {
             currKey = key;
         }
     }
+    async function galleryFunctionality() {
+        const hostDomain = 'https://pub-c083c836a8cb4bdf85a4f6ffe05ef891.r2.dev';
+        const portfolioData = await getJSONData('./portfolioData.json');
+        let galleriesContainer = document.getElementById("galleries-container");
+        let galleryCategories = document.getElementById("gallery-categories");
 
+        let prevID = null;
+
+        const idToFolder = {
+            "merch-gallery": "merchandise",
+            "graphics-gallery": "graphics",
+            "promo-gallery": "promotional",
+            "fa-gallery": "fine-arts",
+            "misc-gallery": "miscellaneous",
+        }
+        let categoryDivs = {};
+        let galleryDivs = {};
+
+        for (const category of galleryCategories.children) {
+            category.addEventListener("click", () => selectGallery(category.id));
+            categoryDivs[category.id] = category;
+        }
+        selectGallery("promo-gallery");
+
+        function selectGallery(galleryID) {
+            if (galleryID == prevID) return;
+            if (prevID) {
+                categoryDivs[prevID].style.backgroundColor = "";
+                galleryDivs[prevID].style.display = "";
+            }
+            if (!(galleryID in galleryDivs)) {
+                galleryDivs[galleryID] = makeSingleGallery(galleryID);
+                galleriesContainer.appendChild(galleryDivs[galleryID]);
+                console.log(galleryID);
+            }
+            galleryDivs[galleryID].style.display = "grid";
+            categoryDivs[galleryID].style.backgroundColor = "whitesmoke";
+            prevID = galleryID;
+        }
+        function makeSingleGallery(galleryID) {
+            let newDiv = document.createElement("div");
+            let parentName = idToFolder[galleryID];
+            let ind = 0;
+            let srcList = [];
+            const galleryData = portfolioData[parentName];
+            for (const [imgName, imgData] of Object.entries(galleryData)) {
+                const original = `${hostDomain}/${parentName}-original/${imgName}.${imgData["ext"]}`;
+                const thumbnail = `${hostDomain}/${parentName}-thumbnail/${imgName}.${imgData["ext"]}`;
+                let img = createImage(thumbnail, imgData["description"], imgData["title"]);
+                img.style.gridColumn = `span ${imgData["weightX"]}`;
+                img.style.gridRow = `span ${imgData["weightY"]}`;
+                let specificInd = ind;
+                srcList.push(original);
+                img.addEventListener("click", () => summonLightbox(srcList, specificInd));
+                newDiv.appendChild(img);
+                ind++;
+            }
+            return newDiv;
+        }
+    }
+    lbLeft.addEventListener("click", () => changeLightboxImg(-1));
+    lbRight.addEventListener("click", () => changeLightboxImg(1));
+
+    function changeLightboxImg(direction) {
+        if (currLightboxTarget == null) return;
+        if (direction == 0) return;
+        currLightboxInd = modLoop(currLightboxInd + direction, currLightboxTarget.length);
+        lightboxImg.src = currLightboxTarget[currLightboxInd];
+        preloadLightboxImage(currLightboxInd + direction);
+    }
+    function summonLightbox(target, ind) {
+        currLightboxTarget = target;
+        currLightboxInd = ind;
+        lightboxContainer.style.display = 'flex';
+        lightboxImg.src = target[ind];
+
+        preloadLightboxImage(ind - 1);
+        preloadLightboxImage(ind + 1);
+    }
+    function preloadLightboxImage(ind) {
+        if (currLightboxTarget == null) return;
+
+        const img = new Image();
+        img.src = currLightboxTarget[modLoop(ind, currLightboxTarget.length)];
+    }
+    lightboxContainer.addEventListener("click", (event) => {
+        if (event.target !== document.getElementById("lb-left") &&
+            event.target !== document.getElementById("lb-right")) {
+            lightboxContainer.style.display = "none";
+            lightboxImg.src = ""
+        }
+    });
     function setDisplay(el, newValue = "") {
         el.style.display = newValue;
     }
@@ -118,21 +217,22 @@ document.addEventListener("DOMContentLoaded", () => {
     function modLoop(dangerIndex, modAmount) {
         return ((dangerIndex % modAmount) + modAmount) % modAmount;
     }
-    function getParagraphDiv(list){
+    function getParagraphDiv(list) {
         let newDiv = document.createElement("div");;
-        for (let index in list){
+        for (let index in list) {
             var p = document.createElement('p');
             p.textContent = list[index];
             newDiv.appendChild(p);
         }
         return newDiv;
     }
-    
+
     function createImage(src, alt, title) {
         var img = document.createElement('img');
         img.src = src;
-        if ( alt != null ) img.alt = alt;
-        if ( title != null ) img.title = title;
+        if (alt != null) img.alt = alt;
+        if (title != null) img.title = title;
         return img;
     }
+
 });
