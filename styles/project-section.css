@@ -1,0 +1,21 @@
+#projects-title{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    color: whitesmoke;
+    background-color: rgb(220, 220, 220);
+}
+
+#projects-container {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    border-top: 1rem solid whitesmoke;
+    border-bottom: 1rem solid whitesmoke;
+}

@@ -36,15 +36,22 @@
 #galleries-container {
     background-color: whitesmoke;
     width: 100%;
-    max-height: max-content;
+    height: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    border-top: 1rem solid whitesmoke;
+    border-bottom: 1rem solid whitesmoke;
 }
 
-#galleries-container>div {
+
+#galleries-container > div {
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: .5rem;
     grid-auto-flow: dense;
-    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -71,8 +78,8 @@
     }
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
     #galleries-container>div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-}
+} */
