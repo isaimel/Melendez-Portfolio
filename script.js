@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     headerFunctionality();
     bioRotationFunctionality();
     galleryFunctionality();
+    projectsFunctionality();
     const lightboxContainer = document.getElementById('lightboxContainer');
     const lightboxImg = document.getElementById('lightboxImg');
     let lbLeft = document.getElementById("lb-left");
@@ -195,6 +196,69 @@ document.addEventListener("DOMContentLoaded", () => {
             lightboxImg.src = ""
         }
     });
+    async function createEmptyProject() {
+        let projectDiv = document.createElement("div");
+        projectDiv.classList.add("project-div");
+
+        let mediaContainer = document.createElement("div");
+        mediaContainer.classList.add("media-container");
+
+        let projectText = document.createElement("div");
+        projectText.classList.add("project-text");
+
+        let projectTitle = document.createElement("div");
+        projectTitle.classList.add("project-title");
+
+        let projectDesc = document.createElement("div");
+        projectDesc.classList.add("project-desc");
+
+        projectText.appendChild(projectTitle);
+        projectText.appendChild(projectDesc);
+
+        projectDiv.appendChild(mediaContainer);
+        projectDiv.appendChild(projectText);
+
+        return projectDiv;
+    }
+    async function createProject(projectInfo){
+        let newProject = await createEmptyProject();
+        let mediaContainer = newProject.querySelector(".media-container");
+        let projectText = newProject.querySelector(".project-text");
+        let projectTitle = newProject.querySelector(".project-title");
+        let projectDesc= newProject.querySelector(".project-desc");
+
+        projectTitle.classList.add("s-heading");
+        if (projectInfo["direction"] == "row") newProject.classList.add("row")
+        getParagraphDiv(projectInfo["short"], projectDesc);
+        projectTitle.textContent = projectInfo["title"];
+
+        switch (projectInfo["type"]){
+            case "iframes":
+                for (const iframeLink of projectInfo["links"]) {
+                    var iframe = document.createElement("iframe");
+                    iframe.src = iframeLink;
+                    mediaContainer.appendChild(iframe);
+                }
+                break;
+            case "images":
+                for (const imgLink of projectInfo["links"]) {
+                    var img = createImage(imgLink);
+                    mediaContainer.appendChild(img);
+                    newProject.classList.add("images");
+                }
+                break;
+        }
+        return newProject;
+    }
+    async function projectsFunctionality(){
+        const projectsData = await getJSONData('./assets/data-files/projectsData.json');
+        let projectsContainer = document.getElementById("projects-container");
+
+        for (const projectData of Object.values(projectsData)) {
+            projectsContainer.appendChild(await createProject(projectData));
+        }
+
+    }
     function setDisplay(el, newValue = "") {
         el.style.display = newValue;
     }
@@ -217,13 +281,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function modLoop(dangerIndex, modAmount) {
         return ((dangerIndex % modAmount) + modAmount) % modAmount;
     }
-    function getParagraphDiv(list) {
-        let newDiv = document.createElement("div");;
+    function getParagraphDiv(list, newDiv = null) {
+        if (newDiv == null) {
+            newDiv = document.createElement("div");
+        }
+
         for (let index in list) {
-            var p = document.createElement('p');
+            let p = document.createElement("p");
             p.textContent = list[index];
             newDiv.appendChild(p);
         }
+
         return newDiv;
     }
 
