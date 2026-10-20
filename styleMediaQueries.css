@@ -1,0 +1,117 @@
+@media (min-width: 901px) {
+    #personal-section.wrapper{
+        padding-right: .5rem;
+    }
+    #gallery-section.wrapper{
+        padding-left: .5rem;
+        padding-bottom: .5rem;
+    }
+    #project-section.wrapper{
+        padding-top: .5rem;
+        padding-left: .5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    /* --- Gallery Section --- */
+    #gallery-section .full {
+        display: none;
+    }
+
+    #gallery-section .abbr {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
+    /* --- Primary Grid --- */
+    #primary-grid {
+        background-color: inherit;
+        grid-template-rows: auto auto auto;
+    }
+
+    /* --- Gallery Section --- */
+    #gallery-section {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    /* --- Project Section --- */
+    #project-section {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    /* --- Personal Section --- */
+    #personal-section {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    #personal-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    #personal-title {
+        height: fit-content;
+        min-width: 100%;
+    }
+
+    #personal-section #compiled-resumes-section {
+        display: none;
+    }
+
+    #personal-section #mult-resume-section {
+        display: flex;
+    }
+
+    #personal-section #say-my-name-section,
+    #personal-section #contact-me-section {
+        flex: 1;
+    }
+
+
+    /* --- Tools Section --- */
+    #tools-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #tools-grid img.double {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* --- Resumes Section --- */
+    #resumes {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    /* --- Project Section --- */
+    .project-div.row {
+        grid-template-rows: 20rem auto;
+    }
+
+    .project-div.row .project-text {
+        grid-row: 2;
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+
+    .project-div.row .media-container {
+        grid-row: 1;
+        grid-column: 1 / 3;
+    }
+
+    .project-div.row hr {
+        justify-self: center;
+        align-self: center;
+    }
+    /* --- About Me Section --- */
+    #about-me-section.wrapper {
+        padding: 1rem;
+    }
+    
+}

@@ -1,596 +1,621 @@
-{
-    "fine-arts": {
-        "black-cat": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "blue-jay": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "cofee-cup": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "coffee-dippers": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "cornflowers": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "flan": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "heart-coffee": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "ice-cream": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "koi-fish": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "leaf-rice": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "light-pink-flower": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "maine-footsteps-1": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "maine-footsteps-2": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "mice-painting": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "odd-breakfast": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "pink-lotus": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "red-panda": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "shiba": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "snoopy-angeles": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "sunflowers": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "totoro-gift": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        }
+[
+    {
+        "parent": "promotional",
+        "title-full": "Promotional",
+        "title-abbr": "Promo",
+        "item": [
+            {
+                "name": "apple-picking",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "aranas-infosesh",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "cpa-poster",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "elect-tulip-1",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "elect-tulip-2",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "hello-spiders",
+                "ext": "gif",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "je-clean",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "je-formal-1",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "je-formal-2",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "jecc-recruitment",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "mellon-duo",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "mellon-trio",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "ntn-banner",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "ntn-pamphlet",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "peer-advising-1",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "peer-advising-2",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "senior-border",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "senior-calendar",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "senior-photo",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "spider-cider",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "tft",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "toast",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "tulip-protection",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            }
+        ]
     },
-    "graphics": {
-        "big-letter": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "drum-set": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "electric-guitar": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "gate": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "je-lantern-1": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "je-lantern-2": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "je-stone": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "keyboard": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "microphone": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "saxophone": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "showcase": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "spider": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "trumpet": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "tulip": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "violin": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        }
+    {
+        "parent": "merchandise",
+        "title-full": "Merchandise",
+        "title-abbr": "Merch",
+        "item": [
+            {
+                "name": "allison-lee",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "aranas",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "bac",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "kelly-tran",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "maddy-corson",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "sux-skew",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "sux_center",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            }
+        ]
     },
-    "miscellaneous": {
-        "digital-art-final": {
-            "ext": "gif",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "graphics-final": {
-            "ext": "gif",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "img3": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "invader": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "moth": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "study": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "trordan": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        }
+    {
+        "parent": "graphics",
+        "title-full": "Graphics",
+        "title-abbr": "Graphics",        
+        "item": [
+            {
+                "name": "big-letter",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "drum-set",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "electric-guitar",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "gate",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "je-lantern-1",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "je-lantern-2",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "je-stone",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "keyboard",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "microphone",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "saxophone",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "showcase",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "spider",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "trumpet",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "tulip",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "violin",
+                "ext": "png",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            }
+        ]
     },
-    "promotional": {
-        "apple-picking": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "aranas-infosesh": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "cpa-poster": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "elect-tulip-1": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "elect-tulip-2": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "hello-spiders": {
-            "ext": "gif",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "je-clean": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "je-formal-1": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "je-formal-2": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "jecc-recruitment": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "mellon-duo": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "mellon-trio": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "ntn-banner": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 2,
-            "weightY": 1
-        },
-        "ntn-pamphlet": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "peer-advising-1": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "peer-advising-2": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "senior-border": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "senior-calendar": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 2,
-            "weightY": 1
-        },
-        "senior-photo": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "spider-cider": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "tft": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "toast": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "tulip-protection": {
-            "ext": "jpg",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        }
+    {
+        "parent": "fine-arts",
+        "title-full": "Fine Arts",
+        "title-abbr": "FA",
+        "item": [
+            {
+                "name": "black-cat",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "blue-jay",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "cofee-cup",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "coffee-dippers",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "cornflowers",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "flan",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "heart-coffee",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "ice-cream",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "koi-fish",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "leaf-rice",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "light-pink-flower",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "maine-footsteps-1",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "maine-footsteps-2",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "mice-painting",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "odd-breakfast",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "pink-lotus",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "red-panda",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "shiba",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "snoopy-angeles",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "sunflowers",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "totoro-gift",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 3,
+                "weightY": 1
+            }
+        ]
     },
-    "merchandise": {
-        "allison-lee": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "aranas": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "bac": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "kelly-tran": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "maddy-corson": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "sux-skew": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        },
-        "sux_center": {
-            "ext": "png",
-            "title": "",
-            "description": "",
-            "weight": 1,
-            "weightX": 1,
-            "weightY": 1
-        }
+    {
+        "parent": "miscellaneous",
+        "title-full": "Miscellaneous",
+        "title-abbr": "Misc",
+        "item": [
+            {
+                "name": "digital-art-final",
+                "ext": "gif",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "graphics-final",
+                "ext": "gif",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "img3",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            },
+            {
+                "name": "invader",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "moth",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "study",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 2,
+                "weightY": 1
+            },
+            {
+                "name": "trordan",
+                "ext": "jpg",
+                "title": "",
+                "description": "",
+                "weightX": 1,
+                "weightY": 1
+            }
+        ]
     }
-}
+]

@@ -1,0 +1,13 @@
+
+#logo-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#logo-section img{
+    flex: 1;
+    max-width: 3rem;
+    width: 0;
+    height: auto;
+}

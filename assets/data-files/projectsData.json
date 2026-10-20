@@ -1,7 +1,7 @@
 
 {
     "thesis_project": {
-        "type": "iframes",
+        "type": "video",
         "title": "Automating Terrain Generation Using Wave Function Collapse",
         "links": ["https://www.youtube.com/embed/GkSij1V7D1A"],
         "long": [
@@ -13,7 +13,7 @@
         "short": ["Created for the Computing and the Arts major, this project explored the Wave Function Collapse algorithm to generate customizable, visually distinctive terrain using Blender, Python, and Unity."]
     },
     "game_engine": {
-        "type": "iframes",
+        "type": "video",
         "title": "Building a Game Engine: Defending Your Farm",
         "links": ["https://www.youtube.com/embed/wGFAiUFf8XQ"],
         "long": [
@@ -40,7 +40,7 @@
         "short": ["Designed merchandise for three consecutive Tulip Princesses in collaboration with the elected students and college administration, incorporating individual themes and cultural motifs."]
     },
     "dndWebsite": {
-        "type": "iframes",
+        "type": "website",
         "title": "DnD Dice Roller",
         "links": [
             "https://isaimel.github.io/DND-Website/"

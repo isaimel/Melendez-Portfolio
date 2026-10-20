@@ -1,0 +1,33 @@
+{
+    "link": "portfolio/logos",
+    "items": [
+        {
+            "link": "logo-1",
+            "type": "png"
+        },
+        {
+            "link": "logo-2",
+            "type": "png"
+        },
+        {
+            "link": "logo-3",
+            "type": "png"
+        },
+        {
+            "link": "logo-4",
+            "type": "png"
+        },
+        {
+            "link": "logo-5",
+            "type": "png"
+        },
+        {
+            "link": "logo-6",
+            "type": "png"
+        },
+        {
+            "link": "logo-7",
+            "type": "png"
+        }
+    ]
+}

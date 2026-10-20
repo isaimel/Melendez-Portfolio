@@ -1,62 +1,53 @@
-#about-me-title{
+#about-me-section.wrapper{
+    padding: 1rem auto;
+    margin: -1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+#about-me-section .card{
+    width: min(40rem, 100%);
+}
+#blurb-text .single-text{
+    display: none;
+}
+#blurb-text .single-text.selected{
+    display: block;
+}
+
+#about-me-section .s-heading > div:first-of-type {
     display: flex;
     flex-direction: row;
 }
-#personal-section audio{
-    height: 2rem;
-    max-width: 80%;
+
+#about-me-section .m-heading > div:first-of-type {
+    display: flex;
+    flex-direction: row;
 }
-#blurb > img{
-    width: 40%;
+#blurb img{
+    width: 12rem;
     height: auto;
     float: left;
-    margin: 0 .5rem 0 0;
-    border-radius: 10%;
+    margin: 0 1rem 1rem 0;
+    border-radius: .5rem;
 }
-div > :first-child {
-    margin-top: 0;
-}
-div > :last-child {
-    margin-bottom: 0;
-}
+
 #personalities{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     gap: .5rem;
-    height: 3rem;
+    height: 3.2rem;
     width: 100%;
 }
 #personalities img{
-    padding: .4rem 0;
-    box-sizing: border-box;
     height: 100%;
     width: auto;
-    border-radius: 10%;
+}
+#personalities button.selected{
+    background-color: var(--color-5);
+    border: var(--color-2) .1rem solid;
+    transform: var(--scale-1);
 }
 #personalities img:hover{
-    animation: 0.2s small-grow;
-    transform: scale(1.2);
-}
-#personalities img.selected {
-    background-color: rgb(220, 220, 220);
-}
-@keyframes small-grow{
-    0% {transform: scale(1.0)}
-    100% {transform: scale(1.2)}
-}
-#tools-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-flow: dense;
-    /* grid-template-rows: max-content max-content 32rem max-content; */
-    gap: .5rem;
-}
-#tools-grid img{
-    width: 100%;
-    height: auto;
-}
-#tools-grid img.double{
-    grid-column: span 2; 
-    grid-row: span 2;   
+    animation: var(--animation-grow-1);
+    transform: var(--scale-1);
 }

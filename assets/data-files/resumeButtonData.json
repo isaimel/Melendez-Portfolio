@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Design",
+        "src": "assets/resume/resume-gd.pdf",
+        "image": "assets/resume/resume-gd.jpg"
+    },
+    {
+        "title": "Programming",
+        "src": "assets/resume/resume-p.pdf",
+        "image": "assets/resume/resume-p.jpg"
+
+    },
+    {
+        "title": "General",
+        "src": "assets/resume/resume-g.pdf",
+        "image": "assets/resume/resume-g.jpg"
+    }
+]

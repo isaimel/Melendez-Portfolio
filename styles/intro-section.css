@@ -1,0 +1,23 @@
+#intro-section .s-heading{
+    color: var(--color-3);
+}
+#intro-section hr{
+    border-top: 0.1rem solid color-mix(in srgb, var(--color-3) 50%, transparent);
+}
+
+#intro-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--color-3);
+}
+
+#intro-blurb {
+    padding: 0 5vw;
+}

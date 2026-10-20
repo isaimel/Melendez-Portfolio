@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-US">
 
 <head>
@@ -5,43 +6,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Melendez Websites</title>
-
+    <title>Melendez Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/misc/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 
 </head>
 
 <body>
-    <div id="header">
+    <div id="header-section">
         <img id="header-name" src=".\assets\signatures\digital-signature-3.png">
         <div id="header-right">
             <div id="nav-menu">
                 <!-- <div><a href="" target="_blank">About Me</a></div> -->
 
-                <div><a href="" target="_blank">Portfolio</a></div>
+                <div><a target="_blank" rel="noopener noreferrer" target="_blank" href=".\portfolio\portfolio.html">
+                        Portfolio</a></div>
 
-                <div><a href="" target="_blank">Resume</a></div>
+                <div><a target="_blank" rel="noopener noreferrer" target="_blank" href=".\resume\resume.html">
+                        Resume</a></div>
 
-                <div><a href="" target="_blank">Let's Connect!</a></div>
+                <div><a target="_blank" rel="noopener noreferrer" target="_blank" href=".\about-me\about-me.html">
+                        Let's Connect!</a></div>
             </div>
-            <button id="nav-button">≣</button>
+            <button>≣</button>
         </div>
     </div>
     <div id="intro-section">
-        <div id="intro-blurb">LARP DETECTED LARP DETECTED
+        <div id="intro-blurb">
+            <b>
+                Learning how best to represent myself, my tastes, and my experience with every design. I endeavor to
+                support and promote others' works through my own. </b>
         </div>
-        <hr>
+        <!-- <hr> -->
     </div>
-    <div id="personal-section">
-        <div id="about-me-section">
-            <div>
-                <div class="s-heading" id="about-me-title">Meet the&nbsp;<div id="blurb-title">Person</div>
+    <div id="primary-grid">
+        <div id="personal-section" class="wrapper">
+            <div id="personal-container">
+                <div id="say-my-name-section" class="card">
+                    <div class="s-heading">Isaí Meléndez
+                        <hr>
+                    </div>
+                    <div>ee-sah-EE mel-EN-dess </div>
+                    <div>/i.sa'i me'len.des/</div>
+                    <audio controls>
+                        <source src=".\assets\audio\name-pronounciation.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div id="contact-me-section" class="card">
+                    <div class="s-heading">Reach Out!
+                        <hr>
+                    </div>
+                    <!-- <div>Email: isaimel001@gmail.com</div> -->
+                    <div>Houston, TX</div>
+                    <div id="copy-email">Email: isaimel001@gmail.com</div>
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/isai-melendez-93280b24a/">
+                        <img src=".\assets\misc\linkedin-logo.png" alt="Visit MDN Web Docs">
+                    </a>
+
+                </div>
+                <div id="compiled-resumes-section" class="card">
+                    <div class="s-heading">Resume(s)
+                        <hr>
+                    </div>
+                    <div id="resume-container">
+                        <img src=".\assets\resume\resume-gd.jpg" alt="">
+                        <div id="resume-buttons">
+                        </div>
+                    </div>
+                </div>
+                <div id="mult-resume-section">
+                </div>
+            </div>
+        </div>
+        <div id="gallery-section" class="wrapper">
+            <div id="categories-container">
+            </div>
+            <div id="galleries-container" class="card">
+
+            </div>
+        </div>
+        <div id="project-section" class="wrapper">
+            <div id="projects-container">
+            </div>
+
+        </div>
+    </div>
+    <div id="about-me-section" class="wrapper">
+        <div class="card">
+            <div class="s-heading">
+                <div>Meet the&nbsp;<div id="blurb-title">Person</div>
                 </div>
                 <hr>
             </div>
+
             <div id="blurb">
-                <img src=".\assets\personalities\personal\personal.gif">
+                <img>
 
                 <div id="blurb-text" class="st">
                 </div>
@@ -49,128 +116,15 @@
             <div id="personalities">
             </div>
         </div>
-        <div id="say-my-name-section">
-            <div class="s-heading">Isaí Meléndez
-                <hr>
-            </div>
-            <span>ee-sah-EE mel-EN-dess </span>
-            <span>/i.sa'i me'len.des/</span>
-            <audio controls>
-                <source src=".\assets\audio\name-pronounciation.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div id="tools-section">
-            <div class="s-heading">My Toolkit
-                <hr>
-            </div>
-            <div id="tools-grid">
-                <img src=".\assets\my-tools\cloud.png">
-                <img class="double" src=".\assets\my-tools\fresco.png">
-                <img src=".\assets\my-tools\illustrator.png">
-                <img src=".\assets\my-tools\canva.png">
-                <img src=".\assets\my-tools\ibis.png">
-                <img src=".\assets\my-tools\studio.png">
-            </div>
-        </div>
     </div>
-    <div id="gallery-section">
-        <div id="gallery-title" class="m-heading">INTERACTIVE GALLERIES
-            <!-- <hr> -->
-        </div>
-        <div id="gallery-categories">
-            <div id="promo-gallery">
-                <div class="full">Promotional</div>
-                <div class="abbr">Promo</div>
-            </div>
-
-            <div id="merch-gallery">
-                <div class="full">Merchandise</div>
-                <div class="abbr">Merch</div>
-            </div>
-
-            <div id="graphics-gallery">
-                <div class="full">Graphics</div>
-                <div class="abbr">Graphics</div>
-            </div>
-
-            <div id="fa-gallery">
-                <div class="full">Fine Arts</div>
-                <div class="abbr">FA</div>
-            </div>
-
-            <div id="misc-gallery">
-                <div class="full">Miscellaneous</div>
-                <div class="abbr">Misc</div>
-            </div>
-        </div>
-        <div id="galleries-container">
-
-        </div>
+    <div id="logo-section">
     </div>
-    <div id="project-section">
-        <div id="projects-title" class="m-heading">MY PROJECTS
-            <!-- <hr> -->
-        </div>
-        <div id="projects-container">
-            <div class="project-div row">
-                <div class="media-container website">
-                    <iframe src="https://isaimel.github.io/DND-Website/" title="D&D Website" style="border: none;"
-                        loading="lazy"></iframe>
-                </div>
-                <div class="project-text">
-                    <div class="project-title s-heading"> Terrain Generation w/ Wave Function Collapse</div>
-                    <div class="project-desc">
-                        Created for the Computing and the Arts major, this project explored the Wave Function Collapse
-                        algorithm to achieve scalability, visual identity, and customization in procedural terrain
-                        generation. Developed using Blender, its Python API, and Unity, the project was exhibited as a
-                        colorful visualization of the algorithm constructing terrain in real time.
-                    </div>
-                </div>
-            </div>
-            <div class="project-div row">
-                <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/KhG_b6rUFhg" title="YouTube video" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="project-text">
-                    <div class="project-title s-heading"> Terrain Generation w/ Wave Function Collapse</div>
-                    <div class="project-desc">
-                        Created for the Computing and the Arts major, this project explored the Wave Function Collapse
-                        algorithm to achieve scalability, visual identity, and customization in procedural terrain
-                        generation. Developed using Blender, its Python API, and Unity, the project was exhibited as a
-                        colorful visualization of the algorithm constructing terrain in real time.
-                    </div>
-                </div>
-            </div>
-            <div class="project-div">
-                <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/KhG_b6rUFhg" title="YouTube video" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="project-text">
-                    <div class="project-title s-heading"> Terrain Generation w/ Wave Function Collapse</div>
-                    <div class="project-desc">
-                        Created for the Computing and the Arts major, this project explored the Wave Function Collapse
-                        algorithm to achieve scalability, visual identity, and customization in procedural terrain
-                        generation. Developed using Blender, its Python API, and Unity, the project was exhibited as a
-                        colorful visualization of the algorithm constructing terrain in real time.
-                    </div>
-                </div>
-            </div>
-        </div>
 
+    <div id="lightbox-container">
+        <button id="lb-left">&lt</button>
+        <img id="lightbox-img" src="" alt="">
+        <button id="lb-right">></button>
     </div>
-    <div id="background-filler"></div>
-    <div id="projects-Container">
-    </div>
-    <div>
-        <div id="lightboxContainer">
-            <button id="lb-left">&lt</button>
-            <img id="lightboxImg" src="" alt="">
-            <button id="lb-right">></button>
-        </div>
 </body>
 
 </html>

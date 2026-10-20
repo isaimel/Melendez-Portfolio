@@ -1,24 +1,27 @@
-{
-    "Programmer": {
-        "link": "./assets/personalities/programmer/programmer.png",
-        "link-sign": "./assets/personalities/programmer/programmer.gif",
+[
+    {
+        "title": "Programmer",
+        "link": "assets/personalities/programmer/programmer.png",
+        "link-sign": "assets/personalities/programmer/programmer.gif",
         "paragraphs": [
             "On the first part of the journey, I was lookin' at all the life. There were plants and birds and rocks and things. There was sand and hills and rings. The first thing I met was a fly with a buzz, and the sky with no clouds. The heat was hot, and the ground was dry, but the air was full of sound.",
             "I've been through the desert on a horse with no name. It felt good to be out of the rain. In the desert, you can remember your name, 'cause there ain't no one for to give you no pain."
         ]
     },
-    "Person": {
-        "link": "./assets/personalities/personal/personal.png",
-        "link-sign": "./assets/personalities/personal/personal.gif",
+    {
+        "title": "Person",
+        "link": "assets/personalities/personal/personal.png",
+        "link-sign": "assets/personalities/personal/personal.gif",
         "paragraphs": [
             "Raindrops are falling on my head, and just like the guy whose feet are too big for his bed, nothing seems to fit. Those raindrops are falling on my head, they keep falling.",
             "So I just did me some talking to the sun, and I said I didn't like the way he got things done, sleeping on the job. Those raindrops are falling on my head, they keep fallin'."        ]
     },
-    "Artist": {
-        "link": "./assets/personalities/artist/artist.png",
-        "link-sign": "./assets/personalities/artist/artist.gif",
+    {
+        "title": "Artist",
+        "link": "assets/personalities/artist/artist.png",
+        "link-sign": "assets/personalities/artist/artist.gif",
         "paragraphs": [
             "馬鹿みたい 子供なのね。夢を追って傷ついて、嘘が下手なくせに 笑えない笑顔みせた。"
         ]
     }
-}
+]

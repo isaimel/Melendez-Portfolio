@@ -1,14 +1,19 @@
-#nav-button {
-    display: none;
-    padding: 0;
-    grid-column: 1;
-    grid-row: 1;
-    animation: slideToRight .15s ease-out;
+#header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 1.5rem;
+    overflow-x: hidden;
 }
 
 #header-name {
-    height: 1.25em;
+    height: 1.6rem;
     width: auto;
+
 }
 
 #header-right {
@@ -19,13 +24,26 @@
     align-content: center;
     align-items: center;
 }
-
+#header-right button {
+    display: none;
+    animation: slideToRight .15s ease-out;
+    background-color: inherit;
+    color: inherit;
+    padding: 0;
+}
 #nav-menu {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
+#header-right.small #nav-menu {
+    display: none;
+    font-size: 1rem;
+}
+#header-right.small button {
+    display: block;
 
+}
 @keyframes slideToRight {
     0% {
         transform: translateX(400%);

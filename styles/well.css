@@ -1,0 +1,126 @@
+:root {
+    --color-1: rgb(245, 245, 245);
+    --color-2: rgb(62, 79, 150);
+    --color-3: rgb(50, 50, 50);
+    --color-5: rgb(255, 255, 255);
+    --color-6: rgb(62, 137, 150);
+    --color-7: rgb(93, 150, 62);
+    --color-8: rgb(62, 109, 150);
+
+    --pad-1: 1rem;
+
+    --scale-1: scale(1.05);
+    --scale-2: scale(1.1);
+
+    --blur-1: blur(0.05rem);
+    --blur-2: blur(0.1rem);
+
+    --ease-in: ease-in;
+    --base-time: 0.05s;
+
+    --animation-grow-1: var(--base-time) var(--ease-in) --grow-1;
+    --animation-grow-2: var(--base-time) var(--ease-in) --grow-2;
+
+    --animation-unblur-1: var(--base-time) var(--ease-in) --unblur-1;
+    --animation-unblur-2: var(--base-time) var(--ease-in) --unblur-2;
+}
+body{
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 1rem; 
+    color: var(--color-3);
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+@keyframes --grow-1{
+    0% {transform: scale(1.0)}
+    100% {transform: var(--scale-1)}
+}
+
+@keyframes --unblur-1{
+    0% { filter: var(--blur-1); }
+    100% { filter: blur(0); }
+}
+@keyframes --grow-2{
+    0% {transform: scale(1.0)}
+    100% {transform: var(--scale-2)}
+}
+
+@keyframes --unblur-2{
+    0% { filter: var(--blur-2); }
+    100% { filter: blur(0); }
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    font-size: inherit;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: var(--color-5);
+    background-color: var(--color-2);
+    font-family: inherit;
+}
+
+hr {
+    width: 80%;
+    margin: 0;
+    border: none;
+    border-top: 0.1rem solid color-mix(in srgb, var(--color-2) 50%, transparent);
+}
+
+.s-heading {
+    font-size: 1.3rem;
+    background-color: inherit;
+    font-weight: 300;
+    width: 100%; 
+    color: var(--color-2);
+}
+
+.m-heading {
+    font-size: 2rem;
+    background-color: inherit;
+    font-weight: 300; 
+    width: 100%; 
+    color: var(--color-2);
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: .5rem;
+    width: 100%;
+    background-color: var(--color-5);
+    box-sizing: border-box;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem .4rem color-mix(in srgb, var(--color-3) 15%, transparent);
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--color-1);
+    box-sizing: border-box;
+}
+.single-text > p:first-of-type {
+    margin-top: 0;
+}
+
+.single-text > p:last-of-type {
+    margin-bottom: 0;
+}
