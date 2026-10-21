@@ -20,25 +20,27 @@
     flex: 1;
     justify-content: center;
     cursor: pointer;
-    color: var(--color-2);
 
 }
 #categories-container .category.card {
     border-radius: 0;
     padding: .75rem;
     padding-top: .5rem;
-    background-color: color-mix(in srgb, var(--color-5) 75%, transparent);
+    color: var(--color-1);
+    background-color: inherit;
+    /* background-color: color-mix(in srgb, var(--color-5) 75%, transparent); */
     box-shadow: unset;
 }
 #categories-container .category.card:first-child {
     border-top-left-radius: .5rem;
+    border-right: 0;
 }
 
 #categories-container .category.card:last-child {
     border-top-right-radius: .5rem;
 }
 #categories-container .category.selected {
-    background-color: var(--color-2);
+    background-color: var(--color-8);
     color: var(--color-5);
 
 }

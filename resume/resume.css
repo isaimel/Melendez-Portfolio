@@ -20,18 +20,12 @@ body {
     padding: 1rem;
     gap: 1rem;
 }
-
-#resume-wrap{
-    width: 100%;
-    background-color: var(--color-2);
-    padding: 1rem;
-}
 #resume {
     display: flex;
     flex-direction: column;
     margin-inline: auto;
     padding: 3.2em 2em;
-    background-color: var(--color-1);
+    background-color: var(--color-5);
     gap: 2em;
 
 }
@@ -41,12 +35,14 @@ body {
     flex-direction: column;
     gap: .5em;
     text-align: center;
+
 }
 
 .resume-name {
     font-size: 3.6em;
     font-weight: 700;
     margin: 0;
+    color: var(--color-6);
 }
 
 .resume-contact {
@@ -79,6 +75,8 @@ body {
     font-size: 2em;
     font-weight: 700;
     line-height: 1.2;
+    color: var(--color-6);
+
 }
 
 .item {
@@ -94,6 +92,7 @@ body {
     justify-content: space-between;
     align-items: baseline;
     gap: 0.25em 1em;
+    color: var(--color-6);
 }
 
 .item-title {
@@ -101,6 +100,7 @@ body {
     font-size: 1.25em;
     font-weight: 700;
     line-height: 1.3;
+
 }
 
 .item-location {
