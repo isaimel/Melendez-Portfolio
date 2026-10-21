@@ -8,7 +8,7 @@
 #intro-section {
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.6rem;
     justify-content: center;
     align-items: center;
     justify-self: center;
