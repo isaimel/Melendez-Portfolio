@@ -4,8 +4,9 @@
         "link": "assets/personalities/programmer/programmer.png",
         "link-sign": "assets/personalities/programmer/programmer.gif",
         "paragraphs": [
-            "On the first part of the journey, I was lookin' at all the life. There were plants and birds and rocks and things. There was sand and hills and rings. The first thing I met was a fly with a buzz, and the sky with no clouds. The heat was hot, and the ground was dry, but the air was full of sound.",
-            "I've been through the desert on a horse with no name. It felt good to be out of the rain. In the desert, you can remember your name, 'cause there ain't no one for to give you no pain."
+            "My first programming course made me reconsider whether I wanted to pursue computer science academically and professionally. I wondered whether I had simply had a negative introduction to the subject or whether I was not “built” for it.",
+            "After much contemplation, I chose to trust my abilities and passion for the material, and I am incredibly happy with that decision. I love delving into programming: whether it's understanding why one algorithm is more efficient than another, why certain code produces bugs, or why certain conventions are encouraged or discouraged.",
+            "With each new project, I inevitably expand my toolkit for any future work. I have studied design patterns, web development, and algorithms, among other topics, and have primarily coded in Python, C, C++, D, and JavaScript. I intend to continue developing independent projects, including those where the art is as important as the code, much like this website."
         ]
     },
     {
@@ -13,15 +14,19 @@
         "link": "assets/personalities/personal/personal.png",
         "link-sign": "assets/personalities/personal/personal.gif",
         "paragraphs": [
-            "Raindrops are falling on my head, and just like the guy whose feet are too big for his bed, nothing seems to fit. Those raindrops are falling on my head, they keep falling.",
-            "So I just did me some talking to the sun, and I said I didn't like the way he got things done, sleeping on the job. Those raindrops are falling on my head, they keep fallin'."        ]
+            "Hi! My name is Isaí, and I'm a first-generation Salvadoran-American. I have lived in Houston all my life (except for my time at Yale University) and have surrounded myself with a diverse group of intelligent, funny, and self-driven people.",
+            "I hold my personal relationships in incredibly high esteem, and whether it's brunch at IHOP, playing video games on the couch, or road trips, I always remember my time with them fondly, especially now as they build their careers in another city or country. I am often the jester in the friend group; I don't like to take myself too seriously all the time. This is not to say that I cannot be serious or that I do not know my own value, but I like to be down-to-earth, a support system, and a source of a laugh.",
+            "I love superhero media, D&D, character design, game development, and drawing fan art. My playlists consist of cumbia, musical originals, and '70s-'90s soft rock, rock, pop, and disco. My greatest weakness is cheesecake."
+        ]
     },
     {
         "title": "Artist",
         "link": "assets/personalities/artist/artist.png",
         "link-sign": "assets/personalities/artist/artist.gif",
         "paragraphs": [
-            "馬鹿みたい 子供なのね。夢を追って傷ついて、嘘が下手なくせに 笑えない笑顔みせた。"
+            "Art has been my primary hobby since elementary school, from doodling on whatever stationery I could find to drawing on digital tablets. I never saw “art” as a possible career because it held the stigma of being an unviable profession in my immigrant household.",
+            "My love for art truly blossomed in university through my first graphic design class, my experience as a tour guide at the Yale University Art Gallery, and designing several pieces of merchandise for my residential college. Working with clients, translating ideas onto paper through my skills and creativity, while incorporating my own taste and quirks into each design was an invaluable experience.",
+            "Although I supplemented my education with computer science, I am determined to pursue a career in graphic design. I love finding the most effective and attention-grabbing ways to communicate information through bold outlines, vibrant colors, and my own illustrations, and I always draw inspiration and ideas from the world and artists around me."
         ]
     }
 ]
