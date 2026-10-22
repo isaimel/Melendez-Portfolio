@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bioRotationFunctionality("./");
     galleryFunctionality("./");
     projectsFunctionality("./");
-    // copyLinkFunctionality();
+    copyLinkFunctionality();
     resumeButtonsFunctionality("./", true, true);
     addLogos("./");
 

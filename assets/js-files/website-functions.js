@@ -187,7 +187,8 @@ function createEmptyProject() {
         projectButton
     };
 }
-function createProjectMedia(projectInfo, mediaContainer, projectDiv) {22
+function createProjectMedia(projectInfo, mediaContainer, projectDiv) {
+    22
     switch (projectInfo["type"]) {
         case "video":
             for (const link of projectInfo["links"]) {
@@ -356,8 +357,8 @@ export async function resumeButtonsFunctionality(rootPath, buttons, mult) {
     }
 }
 export function copyLinkFunctionality() {
-        var copyText = document.getElementById("copy-email").textContent;
+    var copyText = document.getElementById("copy-email").textContent;
 
-        navigator.clipboard.writeText(copyText);
-        alert("Copied the text: " + copyText);
+    navigator.clipboard.writeText(copyText);
+    alert("Copied the text: " + copyText);
 }
