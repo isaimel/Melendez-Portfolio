@@ -1,5 +1,6 @@
 #about-me-section.wrapper{
-    padding: 1rem auto;
+    padding-left: auto;
+    padding-right: auto;
     margin: -1rem 0 0 0;
     display: flex;
     justify-content: center;
