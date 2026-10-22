@@ -1,12 +1,11 @@
 #about-me-section.wrapper{
-    padding-left: auto;
-    padding-right: auto;
     margin: -1rem 0 0 0;
     display: flex;
     justify-content: center;
 }
 #about-me-section .card{
     width: min(40rem, 100%);
+    box-sizing: border-box;
 }
 #blurb-text .single-text{
     display: none;
