@@ -17,7 +17,6 @@ body {
     color: var(--color-3);
     font-size: var(--font-size);
     width: min(100rem, 100%);
-    padding: 1rem;
     gap: 1rem;
 }
 #resume {

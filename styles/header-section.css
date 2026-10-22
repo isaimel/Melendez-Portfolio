@@ -8,6 +8,7 @@
     box-sizing: border-box;
     padding-bottom: 1.5rem;
     overflow-x: hidden;
+    overflow-y: hidden;
     color: var(--color-11);
 }
 
@@ -51,5 +52,11 @@
 
     100% {
         transform: translateX(0%);
+    }
+}
+@media (max-width: 600px) {
+    #header-section{
+        padding: 0 1rem;
+        padding-bottom: 1.5rem;
     }
 }
