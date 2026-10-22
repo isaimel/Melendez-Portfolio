@@ -22,7 +22,7 @@
             "My contributions to the project include most player functions (input, movement, and interactions with collision blocks, tools, weapons, and enemies); tilemap, world, and array conversions (storing game objects as array entries, placing them at world coordinates, and spawning them from tilemap data); and game entity interactions (player with tools, tools with the game world, weapons with enemies, enemies with planted crops, and enemies with the player)."
         ],
         "direction": "row",
-        "short": ["Built a farming game using a custom game engine, contributing player controls, world-to-data conversion systems, and interactions between players, tools, enemies, crops, and the game world."]
+        "short": ["A small team and I built a farming game using a custom game engine. I contributed player controls, world-to-data conversion systems, and interactions between players, tools, enemies, crops, and the game world."]
     },
     "tulip": {
         "type": "images",
