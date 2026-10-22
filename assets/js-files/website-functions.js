@@ -357,8 +357,11 @@ export async function resumeButtonsFunctionality(rootPath, buttons, mult) {
     }
 }
 export function copyLinkFunctionality() {
-    var copyText = document.getElementById("copy-email").textContent;
+    var copyEmail = document.getElementById("copy-email")
+    copyEmail.addEventListener("click", () => {
+        copyEmail.textContent;
 
-    navigator.clipboard.writeText(copyText);
-    alert("Copied the text: " + copyText);
+        navigator.clipboard.writeText(copyText);
+        alert("Copied the text: " + copyText);
+    });
 }
