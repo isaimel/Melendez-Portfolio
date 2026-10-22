@@ -7,6 +7,9 @@
     width: min(40rem, 100%);
     box-sizing: border-box;
 }
+#about-me-section .m-heading, #about-me-section .s-heading{
+    color: var(--color-2);
+}
 #blurb-text .single-text{
     display: none;
 }
