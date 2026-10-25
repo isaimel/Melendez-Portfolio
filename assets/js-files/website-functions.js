@@ -106,6 +106,7 @@ export async function galleryFunctionality(rootPath) {
         let categoryDiv = createGalleryCategory(galleryData);
         categoriesContainer.appendChild(categoryDiv);
         categoryDivs[parent] = categoryDiv;
+        categoryDiv.addEventListener("click", () => selectGallery(parent, galleryData));
         categoryDiv.addEventListener("mouseenter", () => selectGallery(parent, galleryData));
         if (parent == "promotional") selectGallery(parent, galleryData);
     }
@@ -286,6 +287,8 @@ export async function bioRotationFunctionality(rootPath) {
         personalities.appendChild(button);
         buttonDict[key] = button;
         button.addEventListener("mouseenter", () => replacePortrait(key, personalityData));
+        button.addEventListener("click", () => replacePortrait(key, personalityData));
+
         if (personalityData["title"] == "Person") replacePortrait(key, personalityData);
     }
 
